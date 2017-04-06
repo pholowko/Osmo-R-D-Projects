@@ -1,0 +1,11 @@
+>>> Warning 203 "main.c" Line 144(1,1): Condition always TRUE
+>>> Warning 202 "main.c" Line 13(6,13): Variable never used:   adcBuff
+>>> Warning 202 "main.c" Line 18(6,16): Variable never used:   writeReady
+>>> Warning 202 "main.c" Line 21(7,10): Variable never used:   clk
+>>> Warning 202 "C:\Aquarium Software\Debug Monitor\CU20045SCPB-U1J.c" Line 147(5,6): Variable never used:   i
+>>> Warning 202 "main.c" Line 50(6,13): Variable never used:   sestICD
+>>> Warning 202 "main.c" Line 101(6,14): Variable never used:   tempBuff
+>>> Warning 202 "main.c" Line 143(16,20): Variable never used:   cntr
+      Memory usage:   ROM=5%      RAM=16% - 20%
+      0 Errors,  8 Warnings.
+Build Successful.

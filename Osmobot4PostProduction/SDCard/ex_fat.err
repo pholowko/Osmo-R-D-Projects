@@ -1,0 +1,10 @@
+*** Error 18 "G:\Osmobot4PostProduction\SDCard\filesystem\filesystem.h" Line 13(13,93): File can not be opened
+    Not in "C:\Program Files (x86)\PICC\devices\SDCard\CCSIncludes\PCDxxxx.h"
+    Not in "C:\Program Files (x86)\PICC\drivers\SDCard\CCSIncludes\PCDxxxx.h"
+    Not in "C:\Program Files (x86)\PICC\DLL\SDCard\CCSIncludes\PCDxxxx.h"
+    Not in source "G:\Osmobot4PostProduction\SDCard\filesystem\SDCard\CCSIncludes\PCDxxxx.h"
+    Not in local "SDCard\CCSIncludes\PCDxxxx.h"
+    Not in project "G:\Osmobot4PostProduction\SDCard\SDCard\CCSIncludes\PCDxxxx.h"
+*** Error 128 "G:\Osmobot4PostProduction\SDCard\filesystem\HardwareProfile.h" Line 285(17,23): A #DEVICE required before this line
+      2 Errors,  0 Warnings.
+Build Failed.

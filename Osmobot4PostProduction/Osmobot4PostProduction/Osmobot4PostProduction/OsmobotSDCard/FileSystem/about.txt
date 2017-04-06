@@ -1,0 +1,26 @@
+This folder holds a simplified version of Microchip's MDD filesystem.  It was
+simplified for CCS C Customers who wanted to use this filesystem in simple
+projects without having to use a linker.
+
+To use the MDD library, #include /filesystem/filesystem.h and #include
+/filesystem/filesystem.c your project.
+
+The API is the same as Microchip's MDD, refer to their documentation for 
+support.
+
+To configure the MDD library, you have to edit HardwareProfile.h (this contains
+hardware configuration such as I/O pins and SPI port) and FSconfig.h (this 
+contains software configuration options).
+
+To prevent recursion, some FAT12 code was commented out - therefore FAT12 is
+not supported in the CCS C Compiler.
+
+Be aware that using this library changes some properties of the CCS compiler:
+   * Case sensitivity is turned on
+   * int=16 bits, long=32 bits.  You can still use int8, int16 and int32.
+   * integers are signed by default.
+   * #DEVICE PASS_STRINGS=IN_RAM (see compiler manual).
+   * #DEVICE CONST=READ_ONLY (see compiler manual. 
+         For PIC18 Only, NOT dsPIC/PIC24).
+
+This port of MDD is based on MDD 1.4.2 from Microchip Application Libraries 

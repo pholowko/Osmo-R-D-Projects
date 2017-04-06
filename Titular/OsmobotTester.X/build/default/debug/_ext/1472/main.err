@@ -1,0 +1,67 @@
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:4:5:  Warning#208  Function not void and does not return a value  SaveConfiguration
+C:\Aquarium Software\Debug Monitor\main.c:205:47:  Warning#230  String truncated
+C:\Aquarium Software\Debug Monitor\main.c:481:1:  Warning#229  Subscript out of range
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:147:1:  Warning#203  Condition always TRUE
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:201:1:  Warning#203  Condition always TRUE
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:258:1:  Warning#203  Condition always TRUE
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:301:1:  Warning#203  Condition always TRUE
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:348:1:  Warning#203  Condition always TRUE
+C:\Aquarium Software\Debug Monitor\main.c:914:1:  Warning#203  Condition always TRUE
+C:\Aquarium Software\Debug Monitor\main.c:25:15:  Warning#202  Variable never used:   streamCntr
+C:\Aquarium Software\Debug Monitor\main.c:26:15:  Warning#202  Variable never used:   dispCntr
+C:\Aquarium Software\Debug Monitor\main.c:27:6:  Warning#202  Variable never used:   writeReady
+C:\Aquarium Software\Debug Monitor\main.c:30:16:  Warning#202  Variable never used:   stufftocheck
+C:\Aquarium Software\Debug Monitor\CU20045SCPB-U1J.c:136:5:  Warning#202  Variable never used:   i
+C:\Aquarium Software\Debug Monitor\MasterReadWriteTeRemoteDevice.c:5:7:  Warning#202  Variable never used:   CO2Raw
+C:\Aquarium Software\Debug Monitor\MasterReadWriteTeRemoteDevice.c:268:12:  Warning#202  Variable never used:   x
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:7:5:  Warning#202  Variable never used:   CurrentCommand
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:11:5:  Warning#202  Variable never used:   passed
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:177:10:  Warning#202  Variable never used:   stuff
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:189:6:  Warning#202  Variable never used:   tempBuff
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:222:8:  Warning#202  Variable never used:   leadingzero
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:222:20:  Warning#202  Variable never used:   y
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:462:5:  Warning#202  Variable never used:   stuff
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:462:12:  Warning#202  Variable never used:   ScaleLevel
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:462:23:  Warning#202  Variable never used:   routernumber
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:462:36:  Warning#202  Variable never used:   exit
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:462:41:  Warning#202  Variable never used:   choice
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:462:48:  Warning#202  Variable never used:   changefolder
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:464:7:  Warning#202  Variable never used:   ClearTemp
+G:\OsmobotLocalDisplay Via Bluetooth\BluetoothRoutines.c:464:17:  Warning#202  Variable never used:   ScaleLevelfloat
+G:\Osmobot4PostProduction\Instrumentation\CheapRHAndTemp.c:42:9:  Warning#202  Variable never used:   version
+G:\Osmobot4PostProduction\Instrumentation\CheapRHAndTemp.c:42:18:  Warning#202  Variable never used:   tempver
+G:\Osmobot4PostProduction\Instrumentation\CheapRHAndTemp.c:72:13:  Warning#202  Variable never used:   h
+C:\Aquarium Software\Debug Monitor\main.c:110:7:  Warning#202  Variable never used:   matrixequation
+C:\Aquarium Software\Debug Monitor\main.c:111:7:  Warning#202  Variable never used:   fourbyfourmatrix
+C:\Aquarium Software\Debug Monitor\main.c:112:7:  Warning#202  Variable never used:   matrixequals
+C:\Aquarium Software\Debug Monitor\main.c:122:7:  Warning#202  Variable never used:   eccalibrationy
+C:\Aquarium Software\Debug Monitor\main.c:123:7:  Warning#202  Variable never used:   eccalibrationx
+C:\Aquarium Software\Debug Monitor\main.c:124:10:  Warning#202  Variable never used:   y
+C:\Aquarium Software\Debug Monitor\main.c:124:13:  Warning#202  Variable never used:   z
+C:\Aquarium Software\Debug Monitor\EEPROMReadWriteRoutines.c:14:20:  Warning#202  Variable never used:   bufferin
+C:\Aquarium Software\Debug Monitor\EEPROMReadWriteRoutines.c:15:19:  Warning#202  Variable never used:   stuff
+C:\Aquarium Software\Debug Monitor\main.c:522:22:  Warning#202  Variable never used:   x
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:193:11:  Warning#202  Variable never used:   returnedvalue
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:193:25:  Warning#202  Variable never used:   returnedresult
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:194:11:  Warning#202  Variable never used:   returnedresultit
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:194:28:  Warning#202  Variable never used:   titemp
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:250:11:  Warning#202  Variable never used:   returnedvalue
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:250:25:  Warning#202  Variable never used:   returnedresult
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:251:11:  Warning#202  Variable never used:   returnedresultit
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:251:28:  Warning#202  Variable never used:   titemp
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:293:11:  Warning#202  Variable never used:   returnedvalue
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:293:25:  Warning#202  Variable never used:   returnedresult
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:294:11:  Warning#202  Variable never used:   returnedresultit
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:294:28:  Warning#202  Variable never used:   titemp
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:340:11:  Warning#202  Variable never used:   returnedvalue
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:340:25:  Warning#202  Variable never used:   returnedresult
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:341:11:  Warning#202  Variable never used:   returnedresultit
+C:\Aquarium Software\Debug Monitor\FindConnectedDevice.c:341:28:  Warning#202  Variable never used:   titemp
+C:\Aquarium Software\Debug Monitor\main.c:806:10:  Warning#202  Variable never used:   teststr2
+C:\Aquarium Software\Debug Monitor\main.c:856:10:  Warning#202  Variable never used:   adcStrCntr
+C:\Aquarium Software\Debug Monitor\main.c:857:10:  Warning#202  Variable never used:   teststr2
+C:\Aquarium Software\Debug Monitor\main.c:859:11:  Warning#202  Variable never used:   tempvar
+C:\Aquarium Software\Debug Monitor\main.c:860:11:  Warning#202  Variable never used:   tempvarint
+      Memory usage:   ROM=57%      RAM=49% - 52%
+      0 Errors,  64 Warnings.
+Build Successful.

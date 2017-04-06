@@ -1,0 +1,58 @@
+ÀÄmain
+   ÃÄMAIN  0/180  Ram=1
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄinitDispIO  0/20  Ram=0
+   ³  ÃÄinitDisplay  0/98  Ram=0
+   ³  ³  ÃÄwriteByte  0/46  Ram=2
+   ³  ³  ³  ÀÄoutput_d_flipped  0/104  Ram=2
+   ³  ³  ÃÄwriteByte  0/46  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÃÄwriteByte  0/46  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄwriteByte  0/46  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄwriteByte  0/46  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄwriteByte  0/46  Ram=2
+   ³  ³     ÀÄ*
+   ³  ÃÄsplash  0/362  Ram=1
+   ³  ³  ÃÄclearDisplay  0/24  Ram=0
+   ³  ³  ³  ÃÄwriteByte  0/46  Ram=2
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÃÄwriteString  0/138  Ram=6
+   ³  ³  ³  ÃÄwriteByte  0/46  Ram=2
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄwriteChar  0/20  Ram=1
+   ³  ³  ³  ³  ÀÄwriteByte  0/46  Ram=2
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄwriteByte  0/46  Ram=2
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄwriteChar  0/20  Ram=1
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄwriteString  0/138  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄwriteString  0/138  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄwriteString  0/138  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÀÄclearDisplay  0/24  Ram=0
+   ³  ³     ÀÄ*
+   ³  ÃÄparseChar  0/52  Ram=4
+   ³  ³  ÀÄwriteCharPos  0/48  Ram=5
+   ³  ³     ÃÄwriteByte  0/46  Ram=2
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÀÄwriteChar  0/20  Ram=1
+   ³  ³        ÀÄ*
+   ³  ÃÄclearLine  0/74  Ram=4
+   ³  ³  ÃÄwriteByte  0/46  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄwriteChar  0/20  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄwriteByte  0/46  Ram=2
+   ³  ³     ÀÄ*
+   ³  ÀÄclearLine  0/74  Ram=4
+   ³     ÀÄ*
+   ÀÄssp_interrupt  0/90  Ram=3

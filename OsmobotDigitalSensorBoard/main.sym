@@ -1,0 +1,157 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019-01A strtok.save
+01B-01E _Randseed
+01F-032 adcBuff
+033-131 rcv_buffer
+132     streamCntr
+133     dispCntr
+134.0   writeReady
+135     xCntr
+136     yCntr
+137-13A clk
+13B     @I2C_STATE
+13C-13D MAIN.cntr
+13C-13F atan2.y
+13E     clearLine.xPos
+13E-151 splash.teststr4
+13E     MAIN.@SCRATCH1
+13F     clearLine.yPos
+13F     parseChar.vala
+140-141 parseChar.tempBuff
+140-143 atan2.x
+140     clearLine.linePos
+141     clearLine.ct
+142.0   parseChar.newLine
+142     clearLine.WAMpos
+143     writeCharPos.xPos
+143     clearLine.@SCRATCH1
+144-147 atan2.z
+144     writeCharPos.yPos
+145     writeCharPos.strPtr
+146     writeCharPos.WAMpos
+147     writeCharPos.i
+148.0   atan2.sign
+148     writeCharPos.@SCRATCH1
+149     atan2.quad
+152-165 splash.teststr1
+166-179 splash.teststr2
+17A-18D splash.teststr3
+18E     writeString.xPos
+18E     splash.@SCRATCH1
+18F     writeString.yPos
+18F     @delay_ms1.P1
+190-191 writeString.strPtr
+192     writeString.linePos
+193     writeString.ct
+194     writeString.WAMpos
+195     writeString.i
+196     writeString.@SCRATCH1
+197     writeChar.val
+198     writeByte.RSval
+199     writeByte.val
+19A     output_d_flipped.val
+19B     output_d_flipped.@SCRATCH1
+19C     ssp_interrupt.state
+19D     ssp_interrupt.sestICD
+19E     ssp_interrupt.@SCRATCH1
+19F     ssp_interrupt.@SCRATCH2
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000AE  ssp_interrupt
+000108  initDispIO
+00011C  output_d_flipped
+000184  writeByte
+0001B2  @delay_ms1
+0001DA  initDisplay
+00023C  clearDisplay
+000254  writeChar
+000268  writeString
+0002F2  splash
+00045C  writeCharPos
+00048C  parseChar
+0004C0  clearLine
+00050A  @cinit1
+00050A  MAIN
+000542  @cinit2
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    C:\Aquarium Software\Debug Monitor\
+
+Project Files:
+    main.c                                                  [15-Jul-14 18:48  CRC=29773ACF]
+    ..\..\Program Files (x86)\PICC\devices\18F4550.h        [15-May-14 13:46  CRC=9C07C70B]
+    ..\..\Program Files (x86)\PICC\drivers\stdlib.h         [08-Jun-11 14:39  CRC=0B6669CF]
+    ..\..\Program Files (x86)\PICC\drivers\stddef.h         [16-Jul-10 09:27  CRC=897CEC6C]
+    ..\..\Program Files (x86)\PICC\drivers\string.h         [10-Apr-14 09:04  CRC=662B2714]
+    ..\..\Program Files (x86)\PICC\drivers\ctype.h          [03-Jan-08 13:55  CRC=2D1F019F]
+    ..\..\Program Files (x86)\PICC\drivers\math.h           [28-Sep-12 11:35  CRC=546412C9]
+    ..\..\Program Files (x86)\PICC\drivers\STDIO.h          [31-Jul-07 13:24  CRC=4E4534F4]
+    CU20045SCPB-U1J.c                                       [02-Jul-14 21:03  CRC=6B7FE63D]
+
+Source signature=675594FF
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    ICD Provisions: Yes
+    Compile Mode:       CCS5
+
+Output Files:
+    Errors:      main.err
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre

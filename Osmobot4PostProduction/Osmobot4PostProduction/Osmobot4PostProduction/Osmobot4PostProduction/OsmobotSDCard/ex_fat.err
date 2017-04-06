@@ -1,0 +1,27 @@
+>>> Warning 224 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\FSConfig.h" Line 191(10,60): #warning   Not using FS_DYNAMIC_MEM for PCD compiler
+>>> Warning 203 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 578(1,1): Condition always TRUE
+>>> Warning 201 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 1523(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 1608(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 1611(1,1): Assignment inside relational expression
+>>> Warning 204 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 2006(1,1): Condition always FALSE
+>>> Warning 203 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 2077(1,1): Condition always TRUE
+>>> Warning 201 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 3066(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 3491(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 3545(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 3611(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 4367(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 4562(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 7064(1,1): Assignment inside relational expression
+>>> Warning 203 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 8922(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 10680(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 10751(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 10995(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 10997(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\sd-spi.c" Line 861(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\sd-spi.c" Line 1133(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\sd-spi.c" Line 1874(1,1): Condition always TRUE
+>>> Warning 202 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 8336(18,19): Variable never used:   d
+>>> Warning 202 "F:\Osmobot4PostProduction\OsmobotSDCard\filesystem\fsio.c" Line 8512(16,17): Variable never used:   c
+      Memory usage:   ROM=20%      RAM=12% - 15%
+      0 Errors,  24 Warnings.
+Build Successful.

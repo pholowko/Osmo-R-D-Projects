@@ -1,0 +1,14 @@
+[PROJECT]
+Target=ex_fat.hex
+Processor_Text=PIC24FJ256GA106
+CCSVersion=5.032
+Compiler=PCD
+[Target Data]
+FileList=ex_fat.c
+[ex_fat.c]
+Type=4
+[mru-list]
+1=ex_fat.c
+[Units]
+Count=1
+1=ex_fat (main)

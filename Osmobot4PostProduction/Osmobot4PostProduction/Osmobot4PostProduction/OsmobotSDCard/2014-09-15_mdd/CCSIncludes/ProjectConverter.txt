@@ -1,0 +1,31 @@
+MPLAB/MPLAB X -> CCS PJT Converter
+
+- Copy ProjectConverter.exe to the same directory as the compiler (ex. C:\Program Files\PICC)
+
+- Run ProjectConverter.exe
+
+- Use the directory box to select the directory of the project you wish to convert.
+
+- When a MPLAB/MPLAB X project is discovered, it will be displayed in the "Projects" box.
+
+- The available devices for the selected project will be displayed in the "Devices" box.
+
+- The "Convert" button will become active when a project and device are selected.
+
+- Selecting the "Save With Project" radio button will cause the PJT to be built and saved 
+  in the same directory as the MPLAB/MPLAB X project (any relative file paths in the 
+  project will be left as is).
+
+- Selecting the "Choose Save Location" radio button will cause a save directory prompt
+  to appear when the "Convert" button is pressed. Select the folder that you wish to save 
+  the project in. (Any relative file paths in the project are converted to absolute paths
+  so PCW can find the files even if they are not in the same directory as the PJT)
+
+- Clicking the "Convert" button will display the project, save location, and device 
+  selected and will ask the user to confirm these settings. Pressing "OK" will start the 
+  conversion.
+
+- The output box at the bottom of the program displays the status messages, errors, and 
+  warnings generated during the conversion.
+
+- After the conversion is complete, the generated .PJT can then be opened in PCW.

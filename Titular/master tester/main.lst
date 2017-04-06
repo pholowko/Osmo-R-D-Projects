@@ -1,0 +1,300 @@
+CCS PCH C Compiler, Version 5.026, 17542               15-Jul-14 18:24
+
+               Filename:   C:\Aquarium Software\Debug Monitor\master tester\main.lst
+
+               ROM used:   408 bytes (0%)
+                           Largest free fragment is 65528
+               RAM used:   37 (1%) at main() level
+                           41 (1%) worst case
+               Stack used: 1 locations
+               Stack size: 31
+
+*
+00000:  GOTO   00A2
+.................... #include <18F67J60.h> 
+.................... //////////// Standard Header file for the PIC18F67J60 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC18F67J60 
+00004:  DATA 54,45
+00006:  DATA 53,54
+00008:  DATA 31,32
+0000A:  DATA 33,34
+0000C:  DATA 35,21
+0000E:  DATA 0A,00
+00010:  DATA 54,45
+00012:  DATA 53,54
+00014:  DATA 3F,21
+00016:  DATA 0A,00
+00018:  MOVFF  23,FEA
+0001C:  MOVFF  22,FE9
+00020:  MOVFF  28,FEF
+00024:  INCF   FE9,F
+00026:  BTFSC  FD8.2
+00028:  INCF   FEA,F
+0002A:  CLRF   FEF
+0002C:  INCF   22,F
+0002E:  BTFSC  FD8.2
+00030:  INCF   23,F
+00032:  GOTO   004E (RETURN)
+00036:  TBLRD*+
+00038:  MOVF   FF5,F
+0003A:  BZ    005C
+0003C:  MOVFF  FF6,25
+00040:  MOVFF  FF7,26
+00044:  MOVFF  FF8,27
+00048:  MOVFF  FF5,28
+0004C:  BRA    0018
+0004E:  MOVFF  25,FF6
+00052:  MOVFF  26,FF7
+00056:  MOVFF  27,FF8
+0005A:  BRA    0036
+0005C:  RETURN 0
+....................  
+.................... #list 
+....................  
+....................  
+....................  
+.................... #USE I2C(MASTER,I2C1, sda=PIN_C4, scl=PIN_C3,FAST=10000,  NOINIT) 
+0005E:  BCF    FC6.7
+00060:  BCF    F9E.3
+00062:  MOVFF  26,FC9
+00066:  MOVLW  02
+00068:  BTFSC  FC6.7
+0006A:  BRA    0076
+0006C:  BTFSS  F9E.3
+0006E:  BRA    006C
+00070:  MOVLW  00
+00072:  BTFSC  FC5.6
+00074:  MOVLW  01
+00076:  MOVWF  01
+00078:  RETURN 0
+.................... //#use delay(clock=41666667) 
+.................... #use delay(clock=25mhz) 
+0007A:  CLRF   FEA
+0007C:  MOVLW  26
+0007E:  MOVWF  FE9
+00080:  MOVF   FEF,W
+00082:  BZ    00A0
+00084:  MOVLW  08
+00086:  MOVWF  01
+00088:  CLRF   00
+0008A:  DECFSZ 00,F
+0008C:  BRA    008A
+0008E:  DECFSZ 01,F
+00090:  BRA    0088
+00092:  MOVLW  19
+00094:  MOVWF  00
+00096:  DECFSZ 00,F
+00098:  BRA    0096
+0009A:  BRA    009C
+0009C:  DECFSZ FEF,F
+0009E:  BRA    0084
+000A0:  RETURN 0
+.................... #fuses NOWDT, NODEBUG, HS 
+....................     
+.................... //#use rs232(baud=9600, uart1, stream=STREAM_UI, errors) 
+.................... //char testString[] = "Hello World!\nTest123!!!"; 
+....................  
+.................... /* 
+.................... void i2c_writeString(int8 addr, char dat[]) 
+.................... { 
+.................... int i=0; 
+.................... //i2c_start(); 
+.................... i2c_write(addr); 
+....................  
+.................... 	while(dat[i]!='\0') 
+.................... { 
+.................... 		i2c_write(dat[i]); 
+.................... 		i++; 
+.................... 	}	 
+.................... }	 
+....................  
+.................... */ 
+.................... //char strTest[]={'T','E','S','T','\n','1','2'}; 
+.................... char strTest[15]; 
+.................... char strTest2[15]; 
+.................... void main() 
+000A2:  CLRF   FF8
+000A4:  BCF    FD0.7
+000A6:  CLRF   23
+000A8:  CLRF   22
+000AA:  MOVF   FC1,W
+000AC:  ANDLW  C0
+000AE:  MOVWF  FC1
+000B0:  MOVLW  07
+000B2:  MOVWF  FB4
+.................... { 
+....................  
+.................... //i2c_init(100000); 
+.................... //i2c_init(20000); 
+.................... i2c_init(1000); 
+000B4:  BSF    F94.3
+000B6:  BSF    F94.4
+000B8:  MOVLW  7F
+000BA:  MOVWF  FC8
+000BC:  MOVLW  28
+000BE:  MOVWF  FC6
+000C0:  BSF    FC7.7
+000C2:  BCF    FC7.6
+....................  
+.................... output_bit(PIN_C5,1); 
+000C4:  BSF    F8B.5
+000C6:  BCF    F94.5
+.................... output_bit(PIN_C0,0); 
+000C8:  BCF    F8B.0
+000CA:  BCF    F94.0
+....................  
+.................... //output_bit(PIN_C5,1); 
+.................... //output_bit(PIN_C0,1); 
+....................  
+.................... sprintf(strTest,"TEST12345!\n"); 
+000CC:  CLRF   23
+000CE:  MOVLW  04
+000D0:  MOVWF  22
+000D2:  MOVLW  04
+000D4:  MOVWF  FF6
+000D6:  MOVLW  00
+000D8:  MOVWF  FF7
+000DA:  MOVLW  00
+000DC:  MOVWF  FF8
+000DE:  RCALL  0036
+.................... sprintf(strTest2,"TEST?!\n"); 
+000E0:  CLRF   23
+000E2:  MOVLW  13
+000E4:  MOVWF  22
+000E6:  MOVLW  10
+000E8:  MOVWF  FF6
+000EA:  MOVLW  00
+000EC:  MOVWF  FF7
+000EE:  MOVLW  00
+000F0:  MOVWF  FF8
+000F2:  RCALL  0036
+.................... while(1) 
+....................     { 
+.................... 	//i2c_writeString(0xa0,testString); 
+.................... //	i2c_start(); 
+.................... //	i2c_write(0xa0); 
+.................... //	i2c_write('u'); 
+.................... //	i2c_write('e'); 
+.................... int i=0; 
+000F4:  CLRF   24
+.................... while(strTest[i]!='\0'){ 
+000F6:  CLRF   03
+000F8:  MOVF   24,W
+000FA:  ADDLW  04
+000FC:  MOVWF  FE9
+000FE:  MOVLW  00
+00100:  ADDWFC 03,W
+00102:  MOVWF  FEA
+00104:  MOVF   FEF,F
+00106:  BZ    0136
+.................... 	i2c_start(); 
+00108:  BSF    FC5.0
+0010A:  BTFSC  FC5.0
+0010C:  BRA    010A
+.................... 	i2c_write(0xa0); 
+0010E:  MOVLW  A0
+00110:  MOVWF  26
+00112:  RCALL  005E
+.................... i2c_write(strTest[i]); 
+00114:  CLRF   03
+00116:  MOVF   24,W
+00118:  ADDLW  04
+0011A:  MOVWF  FE9
+0011C:  MOVLW  00
+0011E:  ADDWFC 03,W
+00120:  MOVWF  FEA
+00122:  MOVFF  FEF,25
+00126:  MOVFF  25,26
+0012A:  RCALL  005E
+.................... 	i2c_stop(); 
+0012C:  BSF    FC5.2
+0012E:  BTFSC  FC5.2
+00130:  BRA    012E
+.................... i++; 
+00132:  INCF   24,F
+00134:  BRA    00F6
+.................... } 
+.................... //	i2c_stop(); 
+.................... 	 
+.................... delay_ms(2000); 
+00136:  MOVLW  08
+00138:  MOVWF  25
+0013A:  MOVLW  FA
+0013C:  MOVWF  26
+0013E:  RCALL  007A
+00140:  DECFSZ 25,F
+00142:  BRA    013A
+....................  
+.................... i=0; 
+00144:  CLRF   24
+.................... while(strTest2[i]!='\0'){ 
+00146:  CLRF   03
+00148:  MOVF   24,W
+0014A:  ADDLW  13
+0014C:  MOVWF  FE9
+0014E:  MOVLW  00
+00150:  ADDWFC 03,W
+00152:  MOVWF  FEA
+00154:  MOVF   FEF,F
+00156:  BZ    0186
+.................... 	i2c_start(); 
+00158:  BSF    FC5.0
+0015A:  BTFSC  FC5.0
+0015C:  BRA    015A
+.................... 	i2c_write(0xa0); 
+0015E:  MOVLW  A0
+00160:  MOVWF  26
+00162:  RCALL  005E
+.................... i2c_write(strTest2[i]); 
+00164:  CLRF   03
+00166:  MOVF   24,W
+00168:  ADDLW  13
+0016A:  MOVWF  FE9
+0016C:  MOVLW  00
+0016E:  ADDWFC 03,W
+00170:  MOVWF  FEA
+00172:  MOVFF  FEF,25
+00176:  MOVFF  25,26
+0017A:  RCALL  005E
+.................... 	i2c_stop(); 
+0017C:  BSF    FC5.2
+0017E:  BTFSC  FC5.2
+00180:  BRA    017E
+.................... i++; 
+00182:  INCF   24,F
+00184:  BRA    0146
+.................... } 
+.................... delay_ms(2000); 
+00186:  MOVLW  08
+00188:  MOVWF  25
+0018A:  MOVLW  FA
+0018C:  MOVWF  26
+0018E:  RCALL  007A
+00190:  DECFSZ 25,F
+00192:  BRA    018A
+00194:  BRA    00F4
+....................  
+....................  
+.................... } 
+.................... } 
+....................  
+00196:  SLEEP 
+....................  
+....................  
+....................  
+....................  
+....................  
+
+Configuration Fuses:
+   Word  1: F4A0   NOWDT STVREN NOXINST NODEBUG NOPROTECT
+   Word  2: FFC4   HS PRIMARY FCMEN IESO WDT32768
+   Word  3: F7F8   ETHLED

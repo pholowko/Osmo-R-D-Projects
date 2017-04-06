@@ -1,0 +1,54 @@
+G:\Osmobot4PostProduction\osmoWebServer.c:261:1:  Warning#201  Assignment inside relational expression
+G:\Osmobot4PostProduction\main.c:186:1:  Info#300  More info:   PWM Resolution: 13.00 bits
+G:\Osmobot4PostProduction\OsmobotSDCard\encription.c:128:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\DORoutines.c:19:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\SDCard\CCSIncludes\24FJ256GA106_registers.h:2489:2:  Warning#238  Duplicate #locate
+G:\Osmobot4PostProduction\SDCard\CCSIncludes\24FJ256GA106_registers.h:2504:2:  Warning#238  Duplicate #locate
+G:\Osmobot4PostProduction\SDCard\CCSIncludes\24FJ256GA106_registers.h:2587:2:  Warning#238  Duplicate #locate
+G:\Osmobot4PostProduction\SDCard\CCSIncludes\24FJ256GA106_registers.h:2602:2:  Warning#238  Duplicate #locate
+G:\Osmobot4PostProduction\SDCard\CCSIncludes\24FJ256GA106_registers.h:4105:15:  Warning#238  Duplicate #locate
+G:\Osmobot4PostProduction\sdcard\filesystem\FSConfig.h:193:10:  Warning#224  #warning   Not using FS_DYNAMIC_MEM for PCD compiler
+G:\Osmobot4PostProduction\sdcard\filesystem\MDD File System\SD-SPI.h:418:13:  Warning#236  Defined identifier matches a variable ID
+G:\Osmobot4PostProduction\sdcard\filesystem\MDD File System\SD-SPI.h:421:13:  Warning#236  Defined identifier matches a variable ID
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:578:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:1523:1:  Warning#201  Assignment inside relational expression
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:1608:1:  Warning#201  Assignment inside relational expression
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:1611:1:  Warning#201  Assignment inside relational expression
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:2006:1:  Warning#204  Condition always FALSE
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:2077:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:3066:1:  Warning#201  Assignment inside relational expression
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:3491:1:  Warning#201  Assignment inside relational expression
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:3545:1:  Warning#201  Assignment inside relational expression
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:3611:1:  Warning#201  Assignment inside relational expression
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:4367:1:  Warning#201  Assignment inside relational expression
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:4562:1:  Warning#201  Assignment inside relational expression
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:7064:1:  Warning#201  Assignment inside relational expression
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:8922:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:10680:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:10751:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:10995:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\sdcard\filesystem\fsio.c:10997:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\sdcard\filesystem\sd-spi.c:864:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\sdcard\filesystem\sd-spi.c:1136:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\sdcard\filesystem\sd-spi.c:1877:1:  Warning#203  Condition always TRUE
+C:\Program Files (x86)\PICC\drivers\pcd_traps.c:165:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\Osmobotsdcard\ex_mdd_common.h:142:21:  Warning#225  Duplicate #define
+G:\Osmobot4PostProduction\HC-06.c:532:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\HC-06.c:574:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\HC-06.c:611:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\HC-06.c:645:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\HC-05.c:30:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\HC-05.c:94:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\USR-WIFI232-X.c:52:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\USR-WIFI232-X.c:106:1:  Warning#203  Condition always TRUE
+C:\Aquarium Software\Debug Monitor\MasterReadWriteTeRemoteDevice.c:206:5:  Warning#208  Function not void and does not return a value  sendConfigData
+G:\Osmobot4PostProduction\Instrumentation\TaosLightSensor.c:1586:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\EyeSquareSee.c:152:1:  Warning#230  String truncated
+G:\Osmobot4PostProduction\main.c:663:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\main.c:822:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\main.c:836:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\main.c:1194:1:  Warning#203  Condition always TRUE
+G:\Osmobot4PostProduction\main.c:1222:1:  Error#129  File can not be opened for write   G:\Osmobot4PostProduction\Osmobot4.X\build\default\production\_ext\1472\main.sym
+C:\Program Files (x86)\PICC\devices\24FJ256GA106.h:11:1:  Error#112  Function used but not defined:  ... BTTestEvent 6785  SCR=14
+      2 Errors,  49 Warnings.
+Build Failed.

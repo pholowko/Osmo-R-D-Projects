@@ -1,0 +1,485 @@
+USING MICROCHIP APPLICATION LIBARIES (MAL) WITH CCS C COMPILER
+------------------------------------------------------------------------------
+
+This document provides a guide to compile Microchip's library files using the
+CCS C Compiler.  This is by no means a definitive guide - you may run into 
+issues or problems not detailed in this guide.
+
+Due to the fact that the Microchip libraries use multiple compilation units
+(linking), a CCS PCW/PCWH/PCWHD license is required.  That is because the
+license for a command-line only compiler does not including linking support.
+
+It is highly recommended to use the latest version of the CCS C Compiler.
+
+
+FIRST STEP - CONFIGURING YOUR IDE (MPLAB8, MPLABX or PCW)
+------------------------------------------------------------------------------
+
+Using these libraries can be complicated, due to the number of files required
+and the dependency of the libraries.  It is recommended that you use MPLAB
+or PCW to maintain these projects.  They provide MPLAB projects, we will need
+to reconfigure them to use CCS C Compiler.  Alternately, we can convert an
+MPLAB project to be used inside CCS PCW IDE.  Choose the section for the IDE
+that you want to use.
+
+As of this writing, MPLAB8 is the most stable IDE for using CCS C Compiler
+and the Microchip libraries.  There are some minor issues with MPLABX and
+PCW that are still being worked on.
+
+MPLAB8
+
+	1.	Before making changes to a MPLAB8 project, it is suggested you make
+		a backup.  You can either open the original .MCP file and save the
+		project as something else, or use Explorer to make a copy of the .MCP
+		and rename the new copy of the .MCP file and open it with MPLAB 8.
+
+	2.	Open the .MCP project file of the project you want to use in CCS.
+
+	3.	Make sure the version of the CCS C Compiler plug-in for MPLAB is 
+		2.0.0.13.  You can determine this by following the directions on this
+		FAQ:
+		http://www.ccsinfo.com/faq.php?page=ccs_mplab
+
+	4.	Change the project to use the CCS compiler by selecting 
+		"Project->Select Language Toolsuite".  For the "Active Toolsuite"
+		pull-down, select "CCS C Compiler for PIC10/12/14/16/18/24/dsPIC30/dsPIC33".
+		
+	5.	The include path needs to be modified to include CCS's version of some
+		common include files used by Microchip C18 and C30 C Compiler.  This
+		can be done by choosing "Project->Build Options->Project", going to
+		the "Directories" tab, select "Include Path" for the "Show Directories
+		For:" pulldown, and then pressing the "New" button and entering in the
+		location of that directory.
+		
+		The directory is called "CCSIncludes".  If you copied it directly to
+		your C:\, then the directory that needs to be entered above woudl be
+		"C:\CCSIncludes\".  This directory could be saved anywhere as long
+		as you specify the correct location in the include path.  You could 
+		also use a relative path.
+      
+MPLABX
+
+We will make a new configuration in the project, and in the new configuration 
+select the CCS C Compiler.
+
+   1. Start MPLABX then open the project that you want to build with CCS C 
+      Compiler.
+      
+   2. Select "File->Project Properties".
+   
+   3. Press 'Manage Configurations' button on the Project Properties window.
+   
+   4. Select the configuration that closely matches your desired configuration
+      and press the 'Duplicate' button.  Rename the duplicate configuration (it
+      will start with "Copy_of_") by pressing the 'Rename' button.
+      
+      For instance, I wanted to port the PIC18 MiWi Project to use the CCS
+      PCH C Compiler.  I duplicated 'PIC18_Explorer' and renamed it 
+      'PIC18_Explorer_CCS_PCH'.
+      
+      Press 'OK' when done duplicating and renaming the project.  The 
+      Configurations window will close.
+      
+   5. In the Project Properties window, scroll through the configurations
+      on the left and find the new configuration you created in the
+      previous step.  Highlight the name of the configuration.
+      
+      On the right side you can choose the compiler toolchain.  Select
+      the 'CCS C Compiler' and press 'Apply'
+
+   6. The include path for this configuration needs to be updated to 
+      add the "CCSIncludes" directory.  Select 'Compiler Options' under
+      'CCS C Compiler.  For 'Options for CCS C Compiler' on the right, select
+      'General' from the pulldown.  Then press the '...' button on the includes
+      column and add the path where you saved the "CCSIncludes" directory.
+      
+AS OF THIS WRITING, MPLAB X SEEMS TO HAVE A BUG.  WHEN YOU DUPLICATE A 
+CONFIGURATION OR CHANGE THE COMPILER TOOLSUITE, THE INCLUDE PATHS GETS LOST.  
+BEFORE YOU ADD "CCSINCLUDES" DIRECTORY TO THE INCLUDE PATH IN THE ABOVE STEP, 
+YOU PROBABLY WANT TO EDIT THE INCLUDE PATH OF ANOTHER CONFIGURATION SO YOU CAN 
+COPY/PASTE THOSE INCLUDE PATHS INTO YOUR NEW CONFIGURATION.
+
+..\..\..\..\..\Microchip\
+..\..\..\..\..\MiWi DE Demo\Basic Demos\Feature Demo\Node 1
+      
+   7. Make any more configuration changes you want to make (like CCS C 
+      Compiler options, or Debugger/Simulator or PIC selection) then press
+      'OK' to close the 'Project Properties' window.
+
+   8. You now need to select your new configuration in MPLAB X.  On the
+      toolbar, between the 'Redo' icon and the 'Build Project' icon there
+      is a pull-down where you can select the configuration.  Select the
+      configuration you created in step 4 above.
+
+   9. Project/configuration is now ready and will use CCS C Compiler
+
+PCW
+
+   1. Use ProjectConvert.exe, which is a tool to convert an MLPAB (8 or X) 
+      project file to a CCS PCW IDE project file.  It is important to note 
+      that this tool doesn't convert any source code, it just converts the 
+      project so the PCW IDE knows what units and source files are in the 
+      project and need be built when you press the 'Build' button.
+      
+      When using ProjectConvert.exe, use either "Save With Project"
+      (project saved in same space as the existing project and relative
+      paths are preserved) or "Choose Save Location" (project can be
+      saved anywhere, but all relative paths are converted to fixed/absolute
+      paths).
+      
+      The MPLAB.X projects are stored in the 'nbproject' folder of the
+      'MPLABX' folder.  MPLAB8 projects are usually stored in the same
+      directory as the source or main C file.
+            
+      When done using this tool, a .pjt file will be created.  When converting
+      an MPLABX project, this .pjt will be saved to the "MPLAB.X" folder.
+      When converting an MPLAB8 project, this .pjt will be saved to the
+      same directory as the MPLAB8 project.
+
+      See ProjectConvert.txt for more documentation of this tool.
+
+   2. Run CCS PCW IDE.  Do a File->Open Project, and open the .pjt file
+      created by the Project Converter.
+      
+   TODO: add __PICXXXX define to your project to match the MPLAB plug-in
+   
+   TODO: add "CCSIncludes" directory to your project's include path.
+   
+   TODO: add CCS's 'drivers' and 'devices' directories to the project's
+      include path.
+   
+   
+SECOND STEP - MODIFIYING THE SOURCE TO ADD CCS COMPILER SUPPORT
+------------------------------------------------------------------------------
+      
+	1.	Most Microchip libraries use "Compiler.h" to configured the library 
+      for the compiler being used.  We can edit this file to add CCS C 
+      Compiler support.
+      
+      Open "Compiler.h" in a text editor.  It should be located at 
+		"<basedir>\Microchip\Include" where "<basedir>" is the root directory
+		where you installed MAL.
+      
+      Look for this:
+      
+         #define __COMPILER_H
+
+         // Include proper device header file
+         #if defined(__18CXX) && !defined(HI_TECH_C)      
+
+      Change it to this:
+         
+         #define __COMPILER_H
+
+         #if defined(__PCD__)
+            #include "PCDxxxx.h"
+         #endif
+         #if defined(__PCH__)
+            #include "p18cxxx.h"
+         #endif
+
+         // Include proper device header file
+         #if defined(__18CXX) && !defined(HI_TECH_C)
+      
+      These files (p18cxxx.h and PCDxxxx.h) are provided by CCS and convert
+      the CCS C Compiler to handle syntax that is used by Microchip's C18,
+      C30 and XCx compilers.  These files are located in the "CCSIncludes",
+      which you have added to your include path in a previous step of this 
+      guide.
+
+   2. In the previous step we inlcuded p18cxxx.h and PCDxxxx.h when using
+      the CCS C Compiler.  But this was only added to "Compiler.h".  Without
+      the CCS version of p18cxxx.h or PCDxxxx.h included, the #device
+      required by the CCS C Compiler is missing.  That means we need 
+      to include "Compiler.h" before any other code.  Most files provided
+      by Microchip will include "Compiler.h" first, but sometimes they
+      do not.  Quite often they include "GenericTypeDefs.h" first.  That
+      means sometimes when you compile you will get "A #DEVICE required 
+      before this line" error from the CCS C Compiler.  Adding this line
+      to the top of "GenericTypeDefs.h" will usually solve the problem:
+      
+         #include "Compiler.h"
+      
+      If you still get this error compiling a file, add the previous line to 
+      the top of the file.
+      
+	3.	Microchip code/libraries rely heavily on the ability to read and write
+      to the SFR registers and bits for controlling the peripherals and
+      configuration of the PIC.  Therefore you will need to create a .h file
+      that is compatible with their syntax.  This can be done using the
+      chipedit.exe tool that comes with PCW IDE.
+      
+      Run chipedit.exe.
+      
+      Select the PIC you want to create a .h file for.
+      
+      Select the Registers on the chipedit.exe toolbar (look on the top)
+      
+      Select 'Make Include File' (look near the top)
+      
+      For the output file, make sure you choose a path or directory
+      in your include path.  Since "CCSIncludes" is in our include path,
+      save the file there.  Keep the filename the same so it is compatible 
+      with the "ccspics.h" file.
+      
+      Make sure you are using these options:
+        Select 'Pack into structs'
+         'Byte prefix' should be blank.
+         'Byte sufix' should be "bits" (without the quotes)
+         'Make upper case struct names' should be checked.
+         'Combine Low/High byte registers into one int16' should be checked.
+	
+      Press the 'Generate' button.
+	
+	4.	The syntax for ISRs is very different for C18, C30 and CCS C 
+      Compilers.  You will know there is a problem because it will
+      not compile.
+      
+      On C18 compilers (PIC18) they generally only have one ISR vector.
+      Replace that syntax with a #int_default, which the CCS C Compiler
+      will then place that routine onto the ISR vector and also
+      perform context saving/restoring.  If the code you are porting
+      is already performing context saving/restoring, then use #int_global
+      instead (CCS C will not perform context/saving restoring with
+      #int_global).
+      
+      C18 -> CCS example
+         -- C18 code --
+              #pragma code highVector=0x08
+              void HighVector (void)
+              {
+                  _asm goto HighISR _endasm
+              }
+              #pragma code /* return to default code section */
+              
+              #pragma code lowhVector=0x18
+              void LowVector (void)
+              {
+                  _asm goto HighISR _endasm
+              }
+              #pragma code /* return to default code section */
+
+            #pragma interrupt YourISRCode
+            void YourISRCode() { /* code */ }
+         
+         -- CCS code --
+         #int_default
+         void YourISRCode() { /* code */ }
+         
+      On C30 compilers (dsPIC, PIC24) they have syntax for each interrupt,
+      and some effort will be required to port this to the proper CCS 
+      C ISR name.  For example, on C30 the function name _USB1Interrupt()
+      needs to be preceeded in CCS with the #int_usb.  You also have
+      to use the 'noclear' option with your #int_xxx because generally
+      the code for C30 compilers will clear the flag in the routine,
+      so you don't want to the CCS ISR clearing it.
+      
+      C30 -> CCS example
+      C30 syntax:
+       void __attribute__((__interrupt__, auto_psv)) _T3Interrupt( void )
+      
+      CCS syntax:
+       #int_timer3 noclear
+       void _T3Interrupt(void)
+		
+	3.	The syntax for setting configuration bits is different between C18,
+      C30 and CCS.  You will know this happens because you will get a
+      compile error on their syntax.  You will have to replace that
+      code with CCS #fuse syntax.  You will have to manually determine
+      how to change their syntax to the correct #fuse.
+
+      C30 -> CCS example
+      C30 syntax:
+        _CONFIG2(FNOSC_PRIPLL & POSCMOD_HS & PLL_96MHZ_ON & PLLDIV_DIV2 & IESO_OFF) // Primary HS OSC with PLL, USBPLL /2
+        _CONFIG1(JTAGEN_OFF & FWDTEN_OFF & ICS_PGx2)   // JTAG off, watchdog timer off
+
+      CCS syntax:
+        #fuses PR_PLL, HS, PLL2, NOIESO
+        #fuses NOJTAG, WDT, ICSP2
+
+   4. By #including "Compiler.h", which then includes either the compatability
+      layer files "PCDxxxx.h" or "p18cxxx.h", several compiler methods are
+      changed to be more compatible with C18 and C30.  Here are a summary
+      of those changes from normal CCS Compiler operation:
+         -  'int' is signed 16bit.
+         -  'long' is signed 32bit.
+         -  case sensitivity is turned on.
+         -  On PIC18, 'const' is read-only.  To place data into program
+            memory then you need to use 'rom' keyword.
+         -  'const' is different between C18 and C30.  On C18 'const' 
+            is read-only RAM, while in C30 it is read-only program 
+            memory.  They use the 'ROM' keyword on both compilers 
+            to denote read-only program memory.
+         -  #zero_ram is enabled
+         -  TRUE, FALSE, BYTE and BOOLEAN are not normally defined.
+
+         
+KNOWN PROBLEMS
+------------------------------------------------------------------------------
+
+These are known problems that we are working on:
+
+   1. chipedit.exe saves files that start with PIC (ex: 
+      "PIC18F87J11_Registers.h") but ccspics.h isn't looking for PIC in the
+      name of the header (ex: "18F87J11_Registers.h")
+      
+      For now, use chipedit.exe to not save with "PIC" at the beginning of
+      the name.
+
+   2. chipedit.exe when generating SFR header file sometimes trips up on 
+      certain conditions.  
+      
+      Will create a FSR0L and FSR0H byte but not FSR0 word.  PROD too.
+      
+      One known problem is some bitfields are given the same name.  
+      
+      Very rarely an SFR is missed.  For example, when generating the
+      87J11 file it failed to add the OSCCON register.  Or RF6 missed
+      in the PORTFbits struct.
+      
+      Another problem is if there are multiple ports (for instance,
+      two UART ports), chipedit.exe creates both TXSTA1 and TXSTA2.  
+      C18/XC8 were expecting both TXSTA1 and TXSTA to access the
+      first port.  Same thing with SSPBUF and SSP1BUF.
+      
+      ADRESH and ADRESL need to be merged into one word.
+      
+      For these issues you will get a compile error - just click on the
+      error and edit the .h file to fix it.
+      
+      On 67J60 it incorrectly did this;
+         typedef union 
+          {
+               struct 
+               {
+                  unsigned int RE0:1;
+                  unsigned int RE1:1;
+                  unsigned int RE2:1;
+                  unsigned int RE3:1;
+                  unsigned int RE4:1;
+                  unsigned int RE5:1;
+                  
+               };
+               struct {
+                  unsigned int RE:6;
+               };
+         } PORTEBITS;      
+
+         typedef union 
+          {
+            union {
+               struct {
+                  unsigned int RE0:6;
+               };
+               struct {
+                  unsigned int RE:6;
+               };
+
+               struct {
+                  unsigned int TRISE0:6;
+               };
+            };
+               struct {
+                  unsigned int TRISE:6;
+               };
+         } TRISEBITS;
+         TRISEBITS TRISEbits;
+         
+   3. Not having '#include "Compiler.h"' near top of a unit causes "A #DEVICE 
+      required before this line" error from the CCS C Compiler."  This was
+      already detailed earlier in this documnet.  For now just make sure the 
+      '#include "Compiler.h"' is placed before any other code.  Future version 
+      of CCS may add a way of forcing the #device before a compile.
+
+   4. "GenericTypeDefs.h" has this code which causes an error for CCS PCH:
+   
+         #if defined(__18CXX)
+         typedef unsigned short long UINT24;
+         #endif
+      
+      For now, just comment out that code.  There are also a few other places
+      where UINT24 appear in "GenericTypeDefs.h", comment those out as well.
+
+   5. CCS usually doesn't allow bitfields to cross a byte boundary.  C18/XC8 
+      usually has the same limitation.  Usually when this happens it can be 
+      ignored.  For example, this was found in MRF24J10.h:
+      
+         typedef union 
+          {
+              BYTE Val;               // value of interrupts
+              struct 
+              {
+                  BYTE RF_TXIF :1;    // transmission finish interrupt
+                  BYTE :2;
+                  BYTE RF_RXIF :1;    // receiving a packet interrupt
+                  BYTE SECIF :1;      // receiving a secured packet interrupt
+                  BYTE :4;
+              }bits;                  // bit map of interrupts
+          } MRF24J40_IFREG;
+
+      This causes compile error because the last 'BYTE :4' goes over the byte
+      boundary.  But since this field isn't used you can either comment it
+      out or change it to 'BYTE :3'
+
+   6. Variables cannot be initialized by using a function.  For example, this
+      is not legal with the CCS C Compiler:
+      
+         MIWI_TICK t = MiWi_TickGet();
+
+      Support for this is being added into the CCS C Compiler.  Until this
+      is added, change the code to this:
+      
+         MIWI_TICK t;
+         t = MiWi_TickGet();
+
+      You will know when this happens because you will get a compile error.
+
+   7. "extern BYTE TxBuffer[];" doesn't work, CCS C Compiler can't extern
+      an empty array size.  It has to be changed to match the exact size
+      of the global, "extern BYTE TxBuffer[TX_BUFFER_SIZE];"
+      
+   8. Synatx for ISRs is very different between CCS and C18/XC8 - this was
+      detailed earlier in this document.  We plan on adding the ability to
+      handle their syntax in future versions of the CCS C Compiler.
+      
+   9. You cannot 'extern' a 'ROM' variable.  For now, change all 'extern'ed 
+      variables to remove the 'ROM' keyword.  You will know this happens because
+      you will get a compile error.
+      
+   10. I have seen things that I didn't think were C legal, like the following:
+   
+      prototype:
+      void DemoOutput_HandleMessage(void);
+      
+      actual function:
+      void DemoOutput_HandleMessage(BYTE TxNum, BYTE RxNum) { /* code */ }
+      
+      function being called:
+      DemoOutput_HandleMessage();
+      
+      CCS is still analyzing this scenario, but for now we just modified the 
+      function to match the prototype.
+      
+   11. Externing a variable, but then never allocating the variable, is giving 
+      a an error during linking (even if variable isn't used).  For now just 
+      comment out the extern prototype of that variable.
+      
+   12. A void dereference of a rom pointer is expected to set the TBLPTR 
+      registers to that pointer location.  For example:
+      
+      *fileName;
+      
+      If filename was a rom*, then it is expected the value of fileName to be 
+      passed to the TBLPTR.
+      
+   13. Some methods of the assembler usage is different.  
+   
+      CCS will not allow you to enter the a (access bank) parameter of many 
+      commands:
+         btfss   SPI_INTERRUPT_FLAG_ASM, 0
+      The extra ,0 is superflous since 0 is the default operation of that
+      operation.  Chagne it to:
+         btfss   SPI_INTERRUPT_FLAG_ASM
+         
+      BRA and other operations do not allow non-absolute values, such as:
+         BRA -2

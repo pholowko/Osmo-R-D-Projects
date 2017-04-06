@@ -1,0 +1,48 @@
+>>> Warning 203 "F:\Osmobot4PostProduction\wwwParser.c" Line 132(1,1): Condition always TRUE
+>>> Warning 201 "F:\Osmobot4PostProduction\osmoWebServer.c" Line 87(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\osmoWebServer.c" Line 285(1,1): Assignment inside relational expression
+--- Info 300 "main.c" Line 140(1,1): More info:   PWM Resolution: 11.00 bits
+>>> Warning 224 "F:\Osmobot4PostProduction\sdcard\filesystem\FSConfig.h" Line 191(10,60): #warning   Not using FS_DYNAMIC_MEM for PCD compiler
+>>> Warning 203 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 578(1,1): Condition always TRUE
+>>> Warning 201 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 1523(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 1608(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 1611(1,1): Assignment inside relational expression
+>>> Warning 204 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 2006(1,1): Condition always FALSE
+>>> Warning 203 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 2077(1,1): Condition always TRUE
+>>> Warning 201 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 3066(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 3491(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 3545(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 3611(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 4367(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 4562(1,1): Assignment inside relational expression
+>>> Warning 201 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 7064(1,1): Assignment inside relational expression
+>>> Warning 203 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 8922(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 10680(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 10751(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 10995(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 10997(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\sdcard\filesystem\sd-spi.c" Line 861(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\sdcard\filesystem\sd-spi.c" Line 1133(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\sdcard\filesystem\sd-spi.c" Line 1874(1,1): Condition always TRUE
+>>> Warning 203 "F:\Osmobot4PostProduction\Instrumentation\TaosLightSensor.c" Line 1508(1,1): Condition always TRUE
+>>> Warning 225 "F:\Osmobot4PostProduction\OsmobotSDCard\SDCardRoutines.c" Line 45(34,61): Duplicate #define
+>>> Warning 225 "F:\Osmobot4PostProduction\Osmobotsdcard\ex_mdd_common.h" Line 20(0,1): Duplicate #define
+>>> Warning 225 "F:\Osmobot4PostProduction\Osmobotsdcard\ex_mdd_common.h" Line 58(27,29): Duplicate #define
+>>> Warning 225 "F:\Osmobot4PostProduction\Osmobotsdcard\ex_mdd_common.h" Line 59(18,29): Duplicate #define
+>>> Warning 225 "F:\Osmobot4PostProduction\Osmobotsdcard\ex_mdd_common.h" Line 66(23,31): Duplicate #define
+>>> Warning 203 "C:\Program Files (x86)\PICC\Drivers\pcd_traps.c" Line 165(1,1): Condition always TRUE
+>>> Warning 225 "F:\Osmobot4PostProduction\Osmobotsdcard\ex_mdd_common.h" Line 142(21,23): Duplicate #define
+>>> Warning 203 "main.c" Line 572(1,1): Condition always TRUE
+>>> Warning 202 "F:\Osmobot4PostProduction\USR-WIFI232-X.c" Line 352(6,7): Variable never used:   c
+>>> Warning 202 "F:\Osmobot4PostProduction\routerParse.h" Line 25(6,15): Variable never used:   routerXML
+>>> Warning 202 "F:\Osmobot4PostProduction\routerParse.h" Line 28(6,17): Variable never used:   tempXMLBuff
+>>> Warning 202 "F:\Osmobot4PostProduction\osmoWebServer.c" Line 312(6,14): Variable never used:   fakeSSID
+>>> Warning 202 "F:\Osmobot4PostProduction\osmoWebServer.c" Line 313(6,14): Variable never used:   fakePASS
+>>> Warning 202 "F:\Osmobot4PostProduction\Stringsplitter.c" Line 60(6,14): Variable never used:   dispBuff
+>>> Warning 202 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 8336(18,19): Variable never used:   d
+>>> Warning 202 "F:\Osmobot4PostProduction\sdcard\filesystem\fsio.c" Line 8512(16,17): Variable never used:   c
+>>> Warning 202 "main.c" Line 184(6,17): Variable never used:   HTTPwString
+>>> Warning 202 "main.c" Line 411(6,11): Variable never used:   uffit
+      Memory usage:   ROM=19%      RAM=76% - 79%
+      0 Errors,  44 Warnings.
+Build Successful.

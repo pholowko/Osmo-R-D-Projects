@@ -1,0 +1,82 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-012 strTest
+013-021 strTest2
+022-023 @sprintf_string
+024     main.i
+025     main.@SCRATCH1
+025     @PSTRINGC_691.@SCRATCH1
+026     @delay_ms1.P1
+026     @I2C_WRITEU_1.P2
+026     @PSTRINGC_691.@SCRATCH2
+027     @PSTRINGC_691.@SCRATCH3
+028     @SPRINTF.P1
+F71     CCP_5_LOW
+F71     CCP_5
+F72     CCP_5_HIGH
+F74     CCP_4_LOW
+F74     CCP_4
+F75     CCP_4_HIGH
+FB4.6   C1OUT
+FB4.7   C2OUT
+FB8     CCP_3_LOW
+FB8     CCP_3
+FB9     CCP_3_HIGH
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const689.call
+000010  @const694.call
+000018  @SPRINTF
+000036  @PSTRINGC_691
+00005E  @I2C_WRITEU_1
+00007A  @delay_ms1
+0000A2  @cinit1
+0000A2  main
+0000B4  @cinit2
+
+Project Directory:
+    C:\Aquarium Software\Debug Monitor\master tester\
+
+Project Files:
+    main.c                                                  [14-Jul-14 19:47  CRC=BA0ED49D]
+    ..\..\..\Program Files (x86)\PICC\devices\18F67J60.h    [15-May-14 13:46  CRC=A81B2F5A]
+
+Source signature=0A453351
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F67J60
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    Errors:      main.err
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre

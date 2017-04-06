@@ -1,0 +1,223 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0 -W1  @READ_ROM_MEMORY.P1
+W0 -W3  @MULFF64.P2
+W0 -W1  @DIV3232B.P3
+W0 -W1  @MUL3232.P4
+W0 -W3  @SI64TOF64.P5
+W0 -W3  @MULS6464.P6
+W0 -W3  @DIVFF64.P7
+W0      @ITOF.P8
+W0      @SITOF.P9
+W0 -W3  @ADDFF64.P10
+W0 -W1  @DIVS3232A.P11
+W0 -W2  @DIVS4848.P12
+W0 -W1  @DIVFF.P13
+W0 -W1  @MULS3232.P14
+W0 -W1  @FLT.P15
+W0 -W1  @MULFF.P16
+W0 -W3  @DIVS6464.P17
+W0 -W3  @SI64TOF48.P18
+W0 -W1  @SDTOF.P19
+W0 -W1  @ADDFF.P20
+W0      @WRITE_EEPROM16.P21
+W0      @delay_ms1.P22
+W0 -W2  @ADDFF48.P23
+W0      @delay_us1.P24
+W0 -W2  @MULFF48.P25
+W0 -W1  @SFTOI.P26
+W0 -W2  @DIVFF48.P27
+W0 -W2  @MULS4848.P28
+W1      @SCRATCH
+W1L     @I2C_READSU_1.P1
+W1L     @I2C_WRITEU_2.P2
+W1      @READ_PACKED_MEMORY.P3
+W1      @NVR_WR_W.P4
+W1      @WRITE_EEPROM16.P5
+W1L     @I2C_WRITE_1.P6
+W1      @WRITE_PACKED_MEMORY.P7
+W1L     @I2C_READU_2.P8
+W2      @READ_PACKED_MEMORY.P1
+W2      @READ_ROM_MEMORY.P2
+W2 -W3  @MULFF.P3
+W2 -W3  @DIVS3232A.P4
+W2 -W3  @FLT.P5
+W2      @WRITE_EEPROM16.P6
+W2      @WRITE_PACKED_MEMORY.P7
+W2 -W3  @ADDFF.P8
+W2 -W3  @DIVFF.P9
+W2 -W3  @DIV3232B.P10
+W2 -W3  @MUL3232.P11
+W2 -W3  @MULS3232.P12
+W3 -W5  @MULFF48.P1
+W3      @WRITE_PACKED_MEMORY.P2
+W3 -W5  @ADDFF48.P3
+W3 -W5  @MULS4848.P4
+W3 -W5  @DIVS4848.P5
+W3      @READ_EEPROM16.P6
+W3 -W5  @DIVFF48.P7
+W3      @READ_ROM_MEMORY.P8
+W3      @READ_PACKED_MEMORY.P9
+W4      @READ_EEPROM16.P1
+W4 -W7  @DIVFF64.P2
+W4 -W7  @DIVS6464.P3
+W4 -W7  @MULFF64.P4
+W4 -W7  @MULS6464.P5
+W4 -W7  @ADDFF64.P6
+W5      @READ_EEPROM16.P1
+635.0   C1OUT
+635.1   C1ENV
+637.0   C2OUT
+637.1   C2ENV
+639.0   C3OUT
+639.1   C3ENV
+75C     DSGPR0
+75E     DSGPR1
+85A-85B strtok.save
+85C-85F _Randseed
+860     startupdate
+861     address
+862-863 th
+864-865 tl
+866-867 hh
+868-869 hl
+86A-8DD sysOutput
+8DE-95F sysInput
+960-963 Temp1DOOne
+964-967 Temp1DOTwo
+968-96B Temp1DOThree
+96C-96F Temp2DOOne
+970-973 Temp2DOTwo
+974-977 Temp2DOThree
+978-97B Temp3DOOne
+97C-97F Temp3DOTwo
+980-983 Temp3DOThree
+984-987 Temp1ReadingOne
+988-98B Temp1ReadingTwo
+98C-98F Temp1ReadingThree
+990-993 Temp2ReadingOne
+994-997 Temp2ReadingTwo
+998-99B Temp2ReadingThree
+99C-99F Temp3ReadingOne
+9A0-9A3 Temp3ReadingTwo
+9A4-9A7 Temp3ReadingThree
+9A8-9A9 TempOne
+9AA-9AB TempTwo
+9AC-9AD TempThree
+9AE-9B1 RHData
+9B2-9B5 Temperature
+9B6-A35 send_buffer
+A36-AB5 rcv_buffer
+AB6     streamCntr
+AB7     @I2C_STATE
+AB8     MAIN.highbyte
+AB9     MAIN.lowbyte
+ABA-ABB MAIN.returneditem
+ABC-ABF MAIN.returnedresultit
+AC0-AC3 MAIN.titemp
+AC4-AC5 MAIN.returnedresult
+AC6     ReadCOSensor.first
+AC6-AC7 initTransMitBuffer.x
+AC6     GetHDC1080RHTemp.temphigh
+AC7     GetHDC1080RHTemp.templow
+AC7     ReadCOSensor.second
+AC8     GetHDC1080RHTemp.rhhigh
+AC8     ReadCOSensor.third
+AC9     GetHDC1080RHTemp.rhlow
+AC9     ReadCOSensor.forth
+ACA     ReadCOSensor.CheckSum
+ACA-ACB GetHDC1080RHTemp.index
+ACC-ACF GetHDC1080RHTemp.t
+ACC-ACD ReadCOSensor.lTmp
+ACE-ACF ReadCOSensor.i
+AD0-AD3 GetHDC1080RHTemp.h
+AD0-AD1 ReadCOSensor.lTmp2
+AD2     CO2ReadByte.lVal1
+AD2     CO2WriteByte.command
+AD4-AD5 GetHDC1080init.index
+AD4-AD5 CO2ReadByte.i
+AD4-AD5 CO2WriteByte.i
+AD6-AD7 CO2WriteByte.ii
+AD6-AD9 CO2ReadByte.lTmp
+AD6-AD7 GetHDC1080init.version
+AD8-AD9 CO2WriteByte.lTmp
+AD8-AD9 GetHDC1080init.tempver
+ADA-ADD CO2ReadByte.lValue
+ADA-ADB CO2WriteByte.state
+B4A     si2c2_interrupt.incoming
+B4B     si2c2_interrupt.state
+F70-FFF Stack
+
+ROM Allocation:
+000200  @I2C_READSU_1
+000220  @I2C_WRITE_1
+000238  si2c2_interrupt
+00033A  InitCO2
+000344  initTransMitBuffer
+000360  @delay_ms1
+000370  CO2SendStartBit
+000388  CO2WriteByte
+000406  CO2SendStopBit
+000424  CO2ReadByte
+00048A  ReadCOSensor
+00059E  @I2C_WRITEU_2
+0005B6  GetHDC1080init
+0005F4  @I2C_READU_2
+00061E  GetHDC1080RHTemp
+000700  @SITOF
+00074A  @MULFF
+00080E  @DIVFF
+0008D8  @ADDFF
+000A82  @FLT
+000AEA  @SFTOI
+000B16  MAIN
+000B16  @cinit1
+000B5C  @cinit2
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\
+
+Project Files:
+    main.c                                                  [05-Apr-17 08:51  CRC=247836A6]
+    C:\Program Files (x86)\PICC\devices\24FV32KA302.h       [28-Mar-17 14:05  CRC=F3E62E56]
+    C:\Program Files (x86)\PICC\drivers\stdio.h             [31-Jul-07 15:24  CRC=4E4534F4]
+    C:\Program Files (x86)\PICC\drivers\string.h            [26-Mar-15 13:34  CRC=C4814297]
+    C:\Program Files (x86)\PICC\drivers\stddef.h            [05-Sep-14 12:47  CRC=897CEC6C]
+    C:\Program Files (x86)\PICC\drivers\ctype.h             [03-Jan-08 15:55  CRC=2D1F019F]
+    C:\Program Files (x86)\PICC\drivers\stdlib.h            [29-Jun-16 10:34  CRC=7E9CC16B]
+    C:\Aquarium Software\Debug Monitor\CommonPassedDataFromMaterToSlave.h [27-Feb-17 12:52  CRC=4F2EDE77]
+    ..\..\Osmobot4PostProduction\Instrumentation\CheapRHAndTemp.c [13-Mar-17 12:48  CRC=B03F5A4E]
+    I2cCO2.c                                                [11-Feb-17 12:34  CRC=AC83AD15]
+    ITwoSeeGeneralCommunicationSlave.c                      [05-Apr-17 08:14  CRC=F4FEA487]
+
+Source signature=F64CBAE5
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=E5A5
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC24FV32KA302
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+    ICD Provisions: Yes
+    Compile Mode:       CCS5
+    Predefined symbols:
+       #define __DEBUG 1
+       #define __PIC24FV32KA302__ 1
+
+Output Files:
+    Errors:      build\default\debug\main.err
+    INHX8:       build\default\debug\main.hex
+    Symbols:     build\default\debug\main.sym
+    List:        build\default\debug\main.lst
+    Debug/COFF:  build\default\debug\main.cof
+    Project:     main.ccspjt
+    Call Tree:   build\default\debug\main.tre

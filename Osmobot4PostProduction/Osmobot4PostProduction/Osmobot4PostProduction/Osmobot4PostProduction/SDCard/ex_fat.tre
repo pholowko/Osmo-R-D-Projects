@@ -1,0 +1,687 @@
+ÀÄex_fat
+   ÀÄmain  0/1346  Ram=293
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄMountMedia  0/266  Ram=8
+      ³  ÃÄPowerSDCard  0/26  Ram=1
+      ³  ÃÄMDD_SDSPI_InitIO  0/8  Ram=0
+      ³  ÃÄMDD_SDSPI_MediaDetect  0/184  Ram=10
+      ³  ³  ÃÄInitSPISlowMode  0/102  Ram=9
+      ³  ³  ³  ÃÄOpenSPIM  0/22  Ram=2
+      ³  ³  ³  ÀÄOpenSPIM  0/22  Ram=2
+      ³  ³  ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³  ³  ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³  ³  ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³  ³  ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³  ³  ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³  ³  ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³  ³  ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³  ³  ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³  ³  ÀÄWriteSPIM  0/20  Ram=2
+      ³  ³  ÃÄCloseSPIM  0/4  Ram=0
+      ³  ³  ÃÄMDD_SDSPI_MediaInitialize  0/868  Ram=43
+      ³  ³  ³  ÃÄInitSPISlowMode  0/102  Ram=9
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄDelayms  0/50  Ram=6
+      ³  ³  ³  ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄDelayms  0/50  Ram=6
+      ³  ³  ³  ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄOpenSPIM  0/22  Ram=2
+      ³  ³  ³  ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³  ³  ÃÄ@MUL3232  0/48  Ram=8
+      ³  ³  ³  ÃÄ@MUL3232  0/48  Ram=8
+      ³  ³  ³  ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÀÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³     ÀÄ*
+      ³  ³  ÃÄCloseSPIM  0/4  Ram=0
+      ³  ³  ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄCloseSPIM  0/4  Ram=0
+      ³  ³  ÃÄMDD_SDSPI_MediaInitialize  0/868  Ram=43
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÀÄCloseSPIM  0/4  Ram=0
+      ³  ÃÄ@const8413  0/38  Ram=0
+      ³  ÃÄFSInit  0/238  Ram=5
+      ³  ³  ÃÄMDD_SDSPI_InitIO  0/8  Ram=0
+      ³  ³  ÀÄDISKmount  0/194  Ram=12
+      ³  ³     ÃÄMDD_SDSPI_MediaInitialize  0/868  Ram=43
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄLoadMBR  0/736  Ram=23
+      ³  ³     ³  ÃÄMDD_SDSPI_SectorRead  0/84  Ram=21
+      ³  ³     ³  ³  ÀÄMDD_SDSPI_AsyncReadTasks  0/520  Ram=16
+      ³  ³     ³  ³     ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³     ³  ³     ³  ÀÄ*
+      ³  ³     ³  ³     ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³     ³  ³     ³  ÀÄ*
+      ³  ³     ³  ³     ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³     ³  ³     ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³     ³  ³     ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³     ³  ³     ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³     ³  ³     ³  ÀÄ*
+      ³  ³     ³  ³     ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³     ³  ³     ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³     ³  ³     ³  ÀÄ*
+      ³  ³     ³  ³     ÀÄWriteSPIM  0/20  Ram=2
+      ³  ³     ³  ÃÄReadByte  0/16  Ram=7
+      ³  ³     ³  ÃÄReadByte  0/16  Ram=7
+      ³  ³     ³  ÃÄReadByte  0/16  Ram=7
+      ³  ³     ³  ÃÄReadByte  0/16  Ram=7
+      ³  ³     ³  ÃÄReadByte  0/16  Ram=7
+      ³  ³     ³  ÃÄReadByte  0/16  Ram=7
+      ³  ³     ³  ÃÄReadByte  0/16  Ram=7
+      ³  ³     ³  ÃÄReadByte  0/16  Ram=7
+      ³  ³     ³  ÃÄReadByte  0/16  Ram=7
+      ³  ³     ³  ÀÄReadByte  0/16  Ram=7
+      ³  ³     ÀÄLoadBootSector  0/1504  Ram=35
+      ³  ³        ÃÄMDD_SDSPI_SectorRead  0/84  Ram=21
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÃÄReadWord  0/62  Ram=11
+      ³  ³        ÃÄReadByte  0/16  Ram=7
+      ³  ³        ÃÄReadByte  0/16  Ram=7
+      ³  ³        ÃÄReadWord  0/62  Ram=11
+      ³  ³        ÃÄReadDWord  0/66  Ram=15
+      ³  ³        ³  ÃÄReadWord  0/62  Ram=11
+      ³  ³        ³  ÀÄReadWord  0/62  Ram=11
+      ³  ³        ÃÄ@MUL3232  0/48  Ram=8
+      ³  ³        ÃÄReadWord  0/62  Ram=11
+      ³  ³        ÃÄReadWord  0/62  Ram=11
+      ³  ³        ÃÄReadDWord  0/66  Ram=15
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÃÄReadWord  0/62  Ram=11
+      ³  ³        ÃÄ@MUL3232  0/48  Ram=8
+      ³  ³        ÃÄ@DIV3232A  0/84  Ram=8
+      ³  ³        ÃÄReadDWord  0/66  Ram=15
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÃÄMDD_SDSPI_SectorRead  0/84  Ram=21
+      ³  ³        ³  ÀÄ*
+      ³  ³        ÀÄMDD_SDSPI_SectorRead  0/84  Ram=21
+      ³  ³           ÀÄ*
+      ³  ÃÄ@const8414  0/62  Ram=0
+      ³  ÃÄ@PRINTFU32_9600_5845_5844  0/200  Ram=0
+      ³  ³  ÀÄ@DIV3232B  0/68  Ram=8
+      ³  ÃÄ@const8414  0/62  Ram=0
+      ³  ÃÄ@PRINTFU16_9600_5845_5844  0/178  Ram=0
+      ³  ÃÄ@const8414  0/62  Ram=0
+      ³  ÃÄ@PRINTFU16_9600_5845_5844  0/178  Ram=0
+      ³  ÃÄ@const8415  0/62  Ram=0
+      ³  ÃÄ@PRINTFU16_9600_5845_5844  0/178  Ram=0
+      ³  ÀÄ@const8415  0/62  Ram=0
+      ÃÄ@const8465  0/18  Ram=0
+      ÃÄ@SPRINTF  0/14  Ram=1
+      ÃÄ@const8466  0/44  Ram=0
+      ÃÄ@SPRINTF  0/14  Ram=1
+      ÃÄ@const8467  0/26  Ram=0
+      ÃÄ@const8469  0/24  Ram=0
+      ÃÄAppendFile  0/392  Ram=16
+      ³  ÃÄ@const8356  0/60  Ram=0
+      ³  ÃÄ@const8357  0/40  Ram=0
+      ³  ÃÄ@const8357  0/40  Ram=0
+      ³  ÃÄ@const8358  0/14  Ram=0
+      ³  ÃÄFSfopen  0/1046  Ram=19
+      ³  ³  ÃÄMDD_SDSPI_WriteProtectState  0/8  Ram=0
+      ³  ³  ÃÄFormatFileName  0/502  Ram=53
+      ³  ³  ³  ÃÄstrlen  0/32  Ram=6
+      ³  ³  ³  ÀÄValidateChars  0/292  Ram=6
+      ³  ³  ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³  ÃÄFILEfind  0/678  Ram=20
+      ³  ³  ³  ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³  ³  ÃÄReadFAT  0/448  Ram=40
+      ³  ³  ³  ³  ³  ÃÄ@DIV3232A  0/84  Ram=8
+      ³  ³  ³  ³  ³  ÃÄWriteFAT  0/692  Ram=39
+      ³  ³  ³  ³  ³  ³  ÃÄMDD_SDSPI_SectorWrite  0/90  Ram=8
+      ³  ³  ³  ³  ³  ³  ³  ÀÄMDD_SDSPI_AsyncWriteTasks  0/678  Ram=19
+      ³  ³  ³  ³  ³  ³  ³     ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³  ³  ³  ³  ³     ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³  ³  ³  ³  ³     ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³  ³  ³  ³  ³     ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ³  ³  ³  ³     ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ³  ³  ³  ³     ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ³  ³  ³  ³     ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ³  ³  ³  ³     ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³  ³  ³  ³  ³  ³     ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ³  ³  ³  ³     ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³  ³  ³  ³  ³  ³     ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ³  ³  ³  ³     ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ³  ³  ³  ³     ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ³  ³  ³  ³     ÃÄMDD_SDSPI_ReadMedia  0/14  Ram=0
+      ³  ³  ³  ³  ³  ³  ³     ÃÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ³  ³  ³  ³     ÃÄSendMMCCmd  0/320  Ram=28
+      ³  ³  ³  ³  ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³  ³  ³  ³  ³     ÀÄWriteSPIM  0/20  Ram=2
+      ³  ³  ³  ³  ³  ³  ÃÄ@DIV3232A  0/84  Ram=8
+      ³  ³  ³  ³  ³  ³  ÃÄMDD_SDSPI_SectorWrite  0/90  Ram=8
+      ³  ³  ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ³  ³  ÀÄMDD_SDSPI_SectorRead  0/84  Ram=21
+      ³  ³  ³  ³  ³  ³     ÀÄ*
+      ³  ³  ³  ³  ³  ÀÄMDD_SDSPI_SectorRead  0/84  Ram=21
+      ³  ³  ³  ³  ³     ÀÄ*
+      ³  ³  ³  ³  ÃÄCluster2Sector  0/228  Ram=21
+      ³  ³  ³  ³  ³  ÃÄ@MUL3232  0/48  Ram=8
+      ³  ³  ³  ³  ³  ÀÄ@MUL3232  0/48  Ram=8
+      ³  ³  ³  ³  ÃÄflushData  0/116  Ram=13
+      ³  ³  ³  ³  ³  ÃÄCluster2Sector  0/228  Ram=21
+      ³  ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ³  ÀÄMDD_SDSPI_SectorWrite  0/90  Ram=8
+      ³  ³  ³  ³  ³     ÀÄ*
+      ³  ³  ³  ³  ÀÄMDD_SDSPI_SectorRead  0/84  Ram=21
+      ³  ³  ³  ³     ÀÄ*
+      ³  ³  ³  ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÀÄFill_File_Object  0/486  Ram=14
+      ³  ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³     ÀÄGetFullClusterNumber  0/36  Ram=6
+      ³  ³  ÃÄFILEerase  0/262  Ram=22
+      ³  ³  ³  ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄWrite_File_Entry  0/284  Ram=23
+      ³  ³  ³  ³  ÃÄ@DIV3232A  0/84  Ram=8
+      ³  ³  ³  ³  ÃÄCluster2Sector  0/228  Ram=21
+      ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ÀÄMDD_SDSPI_SectorWrite  0/90  Ram=8
+      ³  ³  ³  ³     ÀÄ*
+      ³  ³  ³  ÃÄGetFullClusterNumber  0/36  Ram=6
+      ³  ³  ³  ÀÄFAT_erase_cluster_chain  0/296  Ram=24
+      ³  ³  ³     ÃÄReadFAT  0/448  Ram=40
+      ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³     ÃÄWriteFAT  0/692  Ram=39
+      ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³     ÀÄWriteFAT  0/692  Ram=39
+      ³  ³  ³        ÀÄ*
+      ³  ³  ÃÄCreateFileEntry  0/90  Ram=10
+      ³  ³  ³  ÃÄFindEmptyEntries  0/316  Ram=22
+      ³  ³  ³  ³  ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ÃÄFILEallocate_new_cluster  0/212  Ram=16
+      ³  ³  ³  ³  ³  ÃÄFATfindEmptyCluster  0/302  Ram=29
+      ³  ³  ³  ³  ³  ³  ÃÄReadFAT  0/448  Ram=40
+      ³  ³  ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ³  ³  ÀÄReadFAT  0/448  Ram=40
+      ³  ³  ³  ³  ³  ³     ÀÄ*
+      ³  ³  ³  ³  ³  ÃÄWriteFAT  0/692  Ram=39
+      ³  ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ³  ÃÄWriteFAT  0/692  Ram=39
+      ³  ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ³  ÃÄWriteFAT  0/692  Ram=39
+      ³  ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ³  ÀÄEraseCluster  0/192  Ram=19
+      ³  ³  ³  ³  ³     ÃÄCluster2Sector  0/228  Ram=21
+      ³  ³  ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³  ³  ³     ÃÄflushData  0/116  Ram=13
+      ³  ³  ³  ³  ³     ³  ÀÄ*
+      ³  ³  ³  ³  ³     ÀÄMDD_SDSPI_SectorWrite  0/90  Ram=8
+      ³  ³  ³  ³  ³        ÀÄ*
+      ³  ³  ³  ³  ÀÄFILEallocate_new_cluster  0/212  Ram=16
+      ³  ³  ³  ³     ÀÄ*
+      ³  ³  ³  ÃÄPopulateEntries  0/308  Ram=13
+      ³  ³  ³  ³  ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ³  ÃÄstrncpy  0/62  Ram=11
+      ³  ³  ³  ³  ÀÄWrite_File_Entry  0/284  Ram=23
+      ³  ³  ³  ³     ÀÄ*
+      ³  ³  ³  ÀÄCreateFirstCluster  0/122  Ram=18
+      ³  ³  ³     ÃÄFILECreateHeadCluster  0/210  Ram=12
+      ³  ³  ³     ³  ÃÄFATfindEmptyCluster  0/302  Ram=29
+      ³  ³  ³     ³  ³  ÀÄ*
+      ³  ³  ³     ³  ÃÄWriteFAT  0/692  Ram=39
+      ³  ³  ³     ³  ³  ÀÄ*
+      ³  ³  ³     ³  ÃÄWriteFAT  0/692  Ram=39
+      ³  ³  ³     ³  ³  ÀÄ*
+      ³  ³  ³     ³  ÀÄEraseCluster  0/192  Ram=19
+      ³  ³  ³     ³     ÀÄ*
+      ³  ³  ³     ÃÄLoadDirAttrib  0/144  Ram=10
+      ³  ³  ³     ³  ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³     ³  ³  ÀÄ*
+      ³  ³  ³     ³  ÀÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³     ³     ÀÄ*
+      ³  ³  ³     ÀÄWrite_File_Entry  0/284  Ram=23
+      ³  ³  ³        ÀÄ*
+      ³  ³  ÃÄFILEopen  0/418  Ram=18
+      ³  ³  ³  ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄFill_File_Object  0/486  Ram=14
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄCluster2Sector  0/228  Ram=21
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄflushData  0/116  Ram=13
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÀÄMDD_SDSPI_SectorRead  0/84  Ram=21
+      ³  ³  ³     ÀÄ*
+      ³  ³  ÃÄFSfseek  0/710  Ram=30
+      ³  ³  ³  ÃÄflushData  0/116  Ram=13
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@DIVS3232A  0/126  Ram=8
+      ³  ³  ³  ÃÄ@MUL3232  0/48  Ram=8
+      ³  ³  ³  ÃÄ@DIV3232A  0/84  Ram=8
+      ³  ³  ³  ÃÄ@MUL3232  0/48  Ram=8
+      ³  ³  ³  ÃÄFILEget_next_cluster  0/236  Ram=30
+      ³  ³  ³  ³  ÀÄReadFAT  0/448  Ram=40
+      ³  ³  ³  ³     ÀÄ*
+      ³  ³  ³  ÃÄFILEget_next_cluster  0/236  Ram=30
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄFILEallocate_new_cluster  0/212  Ram=16
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄFILEget_next_cluster  0/236  Ram=30
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄCluster2Sector  0/228  Ram=21
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÀÄMDD_SDSPI_SectorRead  0/84  Ram=21
+      ³  ³  ³     ÀÄ*
+      ³  ³  ÃÄFILEopen  0/418  Ram=18
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄFSfseek  0/710  Ram=30
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄReadFAT  0/448  Ram=40
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄFILEerase  0/262  Ram=22
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄCreateFileEntry  0/90  Ram=10
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄFILEopen  0/418  Ram=18
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄFSfseek  0/710  Ram=30
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄFILEopen  0/418  Ram=18
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³  ÃÄCreateFileEntry  0/90  Ram=10
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄFILEopen  0/418  Ram=18
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄFSfseek  0/710  Ram=30
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÀÄMDD_SDSPI_WriteProtectState  0/8  Ram=0
+      ³  ÃÄ@const8360  0/24  Ram=0
+      ³  ÃÄ@PRINTF_X_9600_5845_5844  0/52  Ram=2
+      ³  ÃÄstrlen  0/32  Ram=6
+      ³  ÃÄFSfwrite  0/722  Ram=39
+      ³  ³  ÃÄMDD_SDSPI_WriteProtectState  0/8  Ram=0
+      ³  ³  ÃÄCluster2Sector  0/228  Ram=21
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄflushData  0/116  Ram=13
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄflushData  0/116  Ram=13
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄMDD_SDSPI_SectorRead  0/84  Ram=21
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄflushData  0/116  Ram=13
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄFILEallocate_new_cluster  0/212  Ram=16
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄFILEget_next_cluster  0/236  Ram=30
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄCluster2Sector  0/228  Ram=21
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÀÄMDD_SDSPI_SectorRead  0/84  Ram=21
+      ³  ³     ÀÄ*
+      ³  ÃÄstrlen  0/32  Ram=6
+      ³  ÃÄFSfwrite  0/722  Ram=39
+      ³  ³  ÀÄ*
+      ³  ÃÄFSfclose  0/306  Ram=17
+      ³  ³  ÃÄflushData  0/116  Ram=13
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄWriteFAT  0/692  Ram=39
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄReadFAT  0/448  Ram=40
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄLoadDirAttrib  0/144  Ram=10
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄWrite_File_Entry  0/284  Ram=23
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÀÄLoadDirAttrib  0/144  Ram=10
+      ³  ³     ÀÄ*
+      ³  ÃÄ@const8361  0/26  Ram=0
+      ³  ÃÄ@PRINTF_X_9600_5845_5844  0/52  Ram=2
+      ³  ÀÄ@PRINTF_X_9600_5845_5844  0/52  Ram=2
+      ÃÄDisplayPrompt  0/224  Ram=67
+      ³  ÃÄFSgetcwd  0/1002  Ram=35
+      ³  ³  ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³  ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄGetFullClusterNumber  0/36  Ram=6
+      ³  ³  ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄGetFullClusterNumber  0/36  Ram=6
+      ³  ³  ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄGetFullClusterNumber  0/36  Ram=6
+      ³  ³  ÀÄGetPreviousEntry  0/446  Ram=17
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄGetFullClusterNumber  0/36  Ram=6
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄGetFullClusterNumber  0/36  Ram=6
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄGetFullClusterNumber  0/36  Ram=6
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÀÄGetFullClusterNumber  0/36  Ram=6
+      ³  ÃÄ@const8325  0/24  Ram=0
+      ³  ÃÄ@SPRINTF  0/14  Ram=1
+      ³  ÃÄ@const8329  0/30  Ram=0
+      ³  ÀÄ@SPRINTF  0/14  Ram=1
+      ÃÄ@delay_ms1  0/16  Ram=2
+      ÃÄ@const8465  0/18  Ram=0
+      ÃÄ@SPRINTF  0/14  Ram=1
+      ÃÄ@const8466  0/44  Ram=0
+      ÃÄ@SPRINTF  0/14  Ram=1
+      ÃÄGetCMD  0/24  Ram=6
+      ³  ÀÄstrtok  0/96  Ram=11
+      ³     ÃÄstrspn  0/78  Ram=10
+      ³     ÀÄstrpbrk  0/64  Ram=10
+      ÃÄstrlen  0/32  Ram=6
+      ÃÄGetOption  0/80  Ram=12
+      ³  ÃÄstrtok  0/96  Ram=11
+      ³  ³  ÀÄ*
+      ³  ÀÄstrtok  0/96  Ram=11
+      ³     ÀÄ*
+      ÃÄstrlen  0/32  Ram=6
+      ÃÄGetOption  0/80  Ram=12
+      ³  ÀÄ*
+      ÃÄFindCommand  0/86  Ram=19
+      ³  ÀÄstricmp  0/166  Ram=8
+      ÃÄDeleteFile  0/154  Ram=2
+      ³  ÃÄ@const8333  0/60  Ram=0
+      ³  ÃÄ@const8334  0/30  Ram=0
+      ³  ÃÄFSremove  0/266  Ram=7
+      ³  ³  ÃÄMDD_SDSPI_WriteProtectState  0/8  Ram=0
+      ³  ³  ÃÄFormatFileName  0/502  Ram=53
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³  ÃÄFILEfind  0/678  Ram=20
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÀÄFILEerase  0/262  Ram=22
+      ³  ³     ÀÄ*
+      ³  ÀÄ@const8335  0/32  Ram=0
+      ÃÄMakeFile  0/218  Ram=8
+      ³  ÃÄ@const8341  0/58  Ram=0
+      ³  ÃÄ@const8342  0/14  Ram=0
+      ³  ÃÄFSfopen  0/1046  Ram=19
+      ³  ³  ÀÄ*
+      ³  ÃÄ@const8344  0/34  Ram=0
+      ³  ÃÄ@PRINTF_X_9600_5845_5844  0/52  Ram=2
+      ³  ÃÄFSfclose  0/306  Ram=17
+      ³  ³  ÀÄ*
+      ³  ÃÄ@const8348  0/38  Ram=0
+      ³  ÃÄ@PRINTF_X_9600_5845_5844  0/52  Ram=2
+      ³  ÀÄ@PRINTF_X_9600_5845_5844  0/52  Ram=2
+      ÃÄAppendFile  0/392  Ram=16
+      ³  ÀÄ*
+      ÃÄChangeDirectory  0/68  Ram=2
+      ³  ÃÄ@const8365  0/64  Ram=0
+      ³  ÃÄFSchdir  0/16  Ram=2
+      ³  ³  ÀÄchdirhelper  0/1086  Ram=78
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄGetFullClusterNumber  0/36  Ram=6
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFormatDirName  0/376  Ram=33
+      ³  ³     ³  ÃÄstrlen  0/32  Ram=6
+      ³  ³     ³  ÀÄValidateChars  0/292  Ram=6
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFILEfind  0/678  Ram=20
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÀÄFileObjectCopy  0/54  Ram=15
+      ³  ÀÄ@const8366  0/40  Ram=0
+      ÃÄDisplayDirectory  0/424  Ram=73
+      ³  ÃÄ@const8371  0/64  Ram=0
+      ³  ÃÄ@const8372  0/16  Ram=0
+      ³  ÃÄFindFirst  0/738  Ram=73
+      ³  ³  ÃÄFormatFileName  0/502  Ram=53
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³  ÃÄFILEfind  0/678  Ram=20
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÀÄFILEopen  0/418  Ram=18
+      ³  ³     ÀÄ*
+      ³  ÃÄ@const8374  0/42  Ram=0
+      ³  ÃÄ@const8375  0/28  Ram=0
+      ³  ÃÄ@PRINTFU16_9600_5845_5844  0/178  Ram=0
+      ³  ÃÄ@const8379  0/20  Ram=0
+      ³  ÃÄ@SPRINTF  0/14  Ram=1
+      ³  ÃÄ@const8380  0/20  Ram=0
+      ³  ÃÄ@SPRINTF  0/14  Ram=1
+      ³  ÃÄ@PRINTFU32_9600_5845_5844  0/200  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÀÄFindNext  0/648  Ram=67
+      ³     ÃÄFormatFileName  0/502  Ram=53
+      ³     ³  ÀÄ*
+      ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³     ÀÄFILEfind  0/678  Ram=20
+      ³        ÀÄ*
+      ÃÄPrintFile  0/362  Ram=77
+      ³  ÃÄ@const8403  0/60  Ram=0
+      ³  ÃÄ@const8404  0/14  Ram=0
+      ³  ÃÄFSfopen  0/1046  Ram=19
+      ³  ³  ÀÄ*
+      ³  ÃÄ@const8406  0/44  Ram=0
+      ³  ÃÄ@PRINTF_X_9600_5845_5844  0/52  Ram=2
+      ³  ÃÄFSfseek  0/710  Ram=30
+      ³  ³  ÀÄ*
+      ³  ÃÄFSfread  0/554  Ram=34
+      ³  ³  ÃÄflushData  0/116  Ram=13
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄCluster2Sector  0/228  Ram=21
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄMDD_SDSPI_SectorRead  0/84  Ram=21
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄFILEget_next_cluster  0/236  Ram=30
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄCluster2Sector  0/228  Ram=21
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÀÄMDD_SDSPI_SectorRead  0/84  Ram=21
+      ³  ³     ÀÄ*
+      ³  ÃÄ@const8408  0/48  Ram=0
+      ³  ÃÄ@PRINTF_X_9600_5845_5844  0/52  Ram=2
+      ³  ÀÄFSfclose  0/306  Ram=17
+      ³     ÀÄ*
+      ÃÄPrintFile  0/362  Ram=77
+      ³  ÀÄ*
+      ÃÄMakeDirectory  0/172  Ram=2
+      ³  ÃÄ@const8387  0/62  Ram=0
+      ³  ÃÄ@const8388  0/38  Ram=0
+      ³  ÃÄFSmkdir  0/16  Ram=2
+      ³  ³  ÀÄmkdirhelper  0/902  Ram=40
+      ³  ³     ÃÄMDD_SDSPI_WriteProtectState  0/8  Ram=0
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄ@const8221  0/16  Ram=0
+      ³  ³     ÃÄFSchdir  0/16  Ram=2
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFSchdir  0/16  Ram=2
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄCreateDIR  0/362  Ram=21
+      ³  ³     ³  ÃÄFormatDirName  0/376  Ram=33
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄCreateFileEntry  0/90  Ram=10
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄWriteFAT  0/692  Ram=39
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄGetFullClusterNumber  0/36  Ram=6
+      ³  ³     ³  ÀÄwriteDotEntries  0/388  Ram=59
+      ³  ³     ³     ÃÄCluster2Sector  0/228  Ram=21
+      ³  ³     ³     ³  ÀÄ*
+      ³  ³     ³     ÀÄMDD_SDSPI_SectorWrite  0/90  Ram=8
+      ³  ³     ³        ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFSchdir  0/16  Ram=2
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÀÄFileObjectCopy  0/54  Ram=15
+      ³  ÃÄ@const8389  0/52  Ram=0
+      ³  ÀÄ@PRINTFU16_9600_5845_5844  0/178  Ram=0
+      ÃÄRemoveDirectory  0/156  Ram=2
+      ³  ÃÄ@const8393  0/64  Ram=0
+      ³  ÃÄ@const8394  0/40  Ram=0
+      ³  ÃÄFSrmdir  0/20  Ram=3
+      ³  ³  ÀÄrmdirhelper  0/1694  Ram=48
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFSchdir  0/16  Ram=2
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFSchdir  0/16  Ram=2
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFILEerase  0/262  Ram=22
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄGetFullClusterNumber  0/36  Ram=6
+      ³  ³     ÃÄ@const8221  0/16  Ram=0
+      ³  ³     ÃÄFSchdir  0/16  Ram=2
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄGetFullClusterNumber  0/36  Ram=6
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄGetFullClusterNumber  0/36  Ram=6
+      ³  ³     ÃÄeraseDir  0/212  Ram=62
+      ³  ³     ³  ÃÄMDD_SDSPI_WriteProtectState  0/8  Ram=0
+      ³  ³     ³  ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ³  ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ³  ÃÄFILEfind  0/678  Ram=20
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÃÄFILEerase  0/262  Ram=22
+      ³  ³     ³  ³  ÀÄ*
+      ³  ³     ³  ÀÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄCache_File_Entry  0/720  Ram=37
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄFSgetcwd  0/1002  Ram=35
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄ@const8221  0/16  Ram=0
+      ³  ³     ÃÄFSchdir  0/16  Ram=2
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÃÄeraseDir  0/212  Ram=62
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄFileObjectCopy  0/54  Ram=15
+      ³  ³     ÀÄFileObjectCopy  0/54  Ram=15
+      ³  ÀÄ@const8395  0/38  Ram=0
+      ÃÄFormatMedia  0/26  Ram=2
+      ³  ÀÄ@const8418  0/44  Ram=0
+      ÃÄShowHelp  0/482  Ram=0
+      ³  ÃÄ@const8430  0/62  Ram=0
+      ³  ÃÄ@const8431  0/18  Ram=0
+      ³  ÃÄ@const8432  0/18  Ram=0
+      ³  ÃÄ@const8433  0/80  Ram=0
+      ³  ÃÄ@const8434  0/50  Ram=0
+      ³  ÃÄ@const8435  0/58  Ram=0
+      ³  ÃÄ@const8436  0/74  Ram=0
+      ³  ÃÄ@const8437  0/58  Ram=0
+      ³  ÃÄ@const8438  0/60  Ram=0
+      ³  ÃÄ@const8439  0/58  Ram=0
+      ³  ÃÄ@const8440  0/70  Ram=0
+      ³  ÃÄ@const8441  0/48  Ram=0
+      ³  ÃÄ@const8442  0/52  Ram=0
+      ³  ÃÄ@const8443  0/84  Ram=0
+      ³  ÃÄ@const8444  0/84  Ram=0
+      ³  ÃÄ@const8445  0/80  Ram=0
+      ³  ÃÄ@const8446  0/72  Ram=0
+      ³  ÃÄ@const8447  0/84  Ram=0
+      ³  ÃÄ@const8448  0/34  Ram=0
+      ³  ÀÄ@const8449  0/60  Ram=0
+      ÃÄMountMedia  0/266  Ram=8
+      ³  ÀÄ*
+      ÃÄMediaInfo  0/396  Ram=39
+      ³  ÃÄ@const8421  0/68  Ram=0
+      ³  ÃÄFSGetDiskProperties  0/720  Ram=18
+      ³  ³  ÃÄReadFAT  0/448  Ram=40
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÀÄReadFAT  0/448  Ram=40
+      ³  ³     ÀÄ*
+      ³  ÃÄ@const8422  0/70  Ram=0
+      ³  ÃÄ@const8423  0/34  Ram=0
+      ³  ÃÄ@const8424  0/38  Ram=0
+      ³  ÃÄ@PRINTFU16_9600_5845_5844  0/178  Ram=0
+      ³  ÃÄ@const8425  0/38  Ram=0
+      ³  ÃÄ@PRINTFU16_9600_5845_5844  0/178  Ram=0
+      ³  ÃÄ@MUL3232  0/48  Ram=8
+      ³  ÃÄ@MUL3232  0/48  Ram=8
+      ³  ÃÄ@const8426  0/40  Ram=0
+      ³  ÃÄ@PRINTFU32_9600_5845_5844  0/200  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄ@MUL3232  0/48  Ram=8
+      ³  ÃÄ@MUL3232  0/48  Ram=8
+      ³  ÃÄ@const8427  0/40  Ram=0
+      ³  ÃÄ@PRINTFU32_9600_5845_5844  0/200  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÀÄ@const8428  0/52  Ram=0
+      ÃÄ@const8473  0/68  Ram=0
+      ÀÄ@const8473  0/68  Ram=0

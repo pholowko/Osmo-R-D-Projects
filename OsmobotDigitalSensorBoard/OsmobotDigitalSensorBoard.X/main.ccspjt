@@ -1,0 +1,16 @@
+[PROJECT]
+Target=build\default\production\_ext\1472\main.hex
+Processor_Text=PIC24FV32KA302
+CCSVersion=5.071
+Compiler=PCD
+[Target Data]
+FileList=..\main.c
+[build\default\production\_ext\1472\main.c]
+Type=4
+[mru-list]
+1=build\default\production\_ext\1472\main.c
+[build\default\debug\_ext\1472\main.c]
+Type=4
+[Units]
+Count=1
+1=main (main)

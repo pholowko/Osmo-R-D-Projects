@@ -1,0 +1,43 @@
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:408:29:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:412:29:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:416:30:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:429:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:433:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:437:26:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:448:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:452:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:456:26:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:468:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:472:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:476:26:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:488:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:492:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:496:26:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:505:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:509:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:513:26:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:529:34:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:533:34:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:537:35:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:567:33:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:571:34:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:575:35:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\main.c:200:1:  Warning#203  Condition always TRUE
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\main.c:189:5:  Warning#208  Function not void and does not return a value  MAIN
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\main.c:28:6:  Warning#202  Variable never used:   startupdate
+G:\Osmobot4PostProduction\Instrumentation\CheapRHAndTemp.c:42:9:  Warning#202  Variable never used:   version
+G:\Osmobot4PostProduction\Instrumentation\CheapRHAndTemp.c:42:18:  Warning#202  Variable never used:   tempver
+G:\Osmobot4PostProduction\Instrumentation\CheapRHAndTemp.c:72:13:  Warning#202  Variable never used:   h
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\I2cCO2.c:27:14:  Warning#202  Variable never used:   lValue
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\I2cCO2.c:208:5:  Warning#202  Variable never used:   state
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\I2cCO2.c:230:5:  Warning#202  Variable never used:   i
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\I2cCO2.c:230:7:  Warning#202  Variable never used:   lTmp2
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:13:16:  Warning#202  Variable never used:   address
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:13:25:  Warning#202  Variable never used:   streamCntr
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:166:20:  Warning#202  Variable never used:   bufferin
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:297:11:  Warning#202  Variable never used:   checkvalue
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:375:20:  Warning#202  Variable never used:   bufferin
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:593:12:  Warning#202  Variable never used:   x
+      Memory usage:   ROM=13%      RAM=37% - 38%
+      0 Errors,  40 Warnings.
+Build Successful.
