@@ -1,80 +1,66 @@
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:267:1:  Warning#229  Subscript out of range
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:268:1:  Warning#229  Subscript out of range
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:408:29:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:412:29:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:416:30:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:429:25:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:433:25:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:437:26:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:448:25:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:452:25:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:456:26:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:468:25:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:472:25:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:476:26:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:488:25:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:492:25:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:496:26:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:505:25:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:509:25:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:513:26:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:529:34:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:533:34:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:537:35:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:567:33:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:571:34:  Warning#240  Pointer types do not match
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:575:35:  Warning#240  Pointer types do not match
-G:\OsmobotDigitalSensorBoard\main.c:922:1:  Warning#207  Code has no effect
-G:\OsmobotDigitalSensorBoard\main.c:925:1:  Warning#203  Condition always TRUE
-G:\OsmobotDigitalSensorBoard\main.c:1077:1:  Warning#207  Code has no effect
-G:\OsmobotDigitalSensorBoard\main.c:1080:1:  Warning#207  Code has no effect
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:73:6:  Warning#202  Variable never used:   ExposurescaleDO
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:74:6:  Warning#202  Variable never used:   ExposurescalepH
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:75:6:  Warning#202  Variable never used:   ExposurescaleLight
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:76:11:  Warning#202  Variable never used:   z
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:82:7:  Warning#202  Variable never used:   fourbyfourmatrix
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:90:7:  Warning#202  Variable never used:   TempCalmatrix
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:91:7:  Warning#202  Variable never used:   pk
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:91:11:  Warning#202  Variable never used:   slope
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:92:7:  Warning#202  Variable never used:   lastphreading
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:130:7:  Warning#202  Variable never used:   RatioI
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:130:15:  Warning#202  Variable never used:   RatioII
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:138:5:  Warning#202  Variable never used:   debugnumber
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:150:7:  Warning#202  Variable never used:   pHHigh
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:150:15:  Warning#202  Variable never used:   pHMiddle
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:150:25:  Warning#202  Variable never used:   pHLower
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:151:11:  Warning#202  Variable never used:   pHHighCalibration
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:151:29:  Warning#202  Variable never used:   pHMiddleCalibration
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:151:49:  Warning#202  Variable never used:   pHLowerCalibration
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:159:7:  Warning#202  Variable never used:   BlueLimit
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:159:17:  Warning#202  Variable never used:   WhiteLimit
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:160:7:  Warning#202  Variable never used:   StartWaterTemperature
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:167:16:  Warning#202  Variable never used:   PWMDOIntensity
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:168:16:  Warning#202  Variable never used:   PWMPHIntensity
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:169:16:  Warning#202  Variable never used:   PWMnh3Intensity
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:170:7:  Warning#202  Variable never used:   DOreadingrange
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:171:7:  Warning#202  Variable never used:   pHreadingrange
-G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:815:6:  Warning#202  Variable never used:   x
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:166:20:  Warning#202  Variable never used:   bufferin
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:297:11:  Warning#202  Variable never used:   checkvalue
-G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:375:20:  Warning#202  Variable never used:   bufferin
-G:\OsmobotDigitalSensorBoard\main.c:728:11:  Warning#202  Variable never used:   attemptcounter
-G:\OsmobotDigitalSensorBoard\main.c:728:27:  Warning#202  Variable never used:   attempts
-G:\OsmobotDigitalSensorBoard\main.c:728:36:  Warning#202  Variable never used:   ttt
-G:\OsmobotDigitalSensorBoard\main.c:728:40:  Warning#202  Variable never used:   x
-G:\OsmobotDigitalSensorBoard\main.c:729:7:  Warning#202  Variable never used:   result
-G:\OsmobotDigitalSensorBoard\main.c:729:14:  Warning#202  Variable never used:   stepdifference
-G:\OsmobotDigitalSensorBoard\main.c:731:7:  Warning#202  Variable never used:   DOReading
-G:\OsmobotDigitalSensorBoard\main.c:731:17:  Warning#202  Variable never used:   pgain
-G:\OsmobotDigitalSensorBoard\main.c:731:23:  Warning#202  Variable never used:   tempoffset
-G:\OsmobotDigitalSensorBoard\main.c:732:6:  Warning#202  Variable never used:   uffit
-G:\OsmobotDigitalSensorBoard\main.c:734:16:  Warning#202  Variable never used:   difference
-G:\OsmobotDigitalSensorBoard\main.c:735:10:  Warning#202  Variable never used:   highbyte
-G:\OsmobotDigitalSensorBoard\main.c:735:20:  Warning#202  Variable never used:   lowbyte
-G:\OsmobotDigitalSensorBoard\main.c:736:11:  Warning#202  Variable never used:   returneditem
-G:\OsmobotDigitalSensorBoard\main.c:869:9:  Warning#202  Variable never used:   returneddummy
-G:\OsmobotDigitalSensorBoard\main.c:871:11:  Warning#202  Variable never used:   OxyBlue
-G:\OsmobotDigitalSensorBoard\main.c:872:11:  Warning#202  Variable never used:   xxx
-      Memory usage:   ROM=37%      RAM=79% - 99%
-      0 Errors,  77 Warnings.
+G:\OsmobotDigitalSensorBoard\main.c:44:34:  Warning#230  String truncated
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:242:1:  Warning#229  Subscript out of range
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:243:1:  Warning#229  Subscript out of range
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:415:29:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:419:29:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:423:30:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:436:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:440:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:444:26:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:455:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:459:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:463:26:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:475:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:479:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:483:26:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:495:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:499:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:503:26:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:512:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:516:25:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:520:26:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:536:34:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:540:34:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:544:35:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:574:33:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:578:34:  Warning#240  Pointer types do not match
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:582:35:  Warning#240  Pointer types do not match
+G:\OsmobotDigitalSensorBoard\main.c:934:1:  Warning#207  Code has no effect
+G:\OsmobotDigitalSensorBoard\main.c:937:1:  Warning#203  Condition always TRUE
+G:\OsmobotDigitalSensorBoard\main.c:1093:1:  Warning#207  Code has no effect
+G:\OsmobotDigitalSensorBoard\main.c:1096:1:  Warning#207  Code has no effect
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:16:7:  Warning#202  Variable never used:   tempa1
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:16:15:  Warning#202  Variable never used:   tempa2
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:16:23:  Warning#202  Variable never used:   tempa3
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:37:6:  Warning#202  Variable never used:   ExposurescaleDO
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:38:6:  Warning#202  Variable never used:   ExposurescalepH
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:39:6:  Warning#202  Variable never used:   ExposurescaleLight
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:54:7:  Warning#202  Variable never used:   TempCalmatrix
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:55:7:  Warning#202  Variable never used:   pk
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:55:11:  Warning#202  Variable never used:   slope
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:56:7:  Warning#202  Variable never used:   lastphreading
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:94:7:  Warning#202  Variable never used:   RatioI
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:94:15:  Warning#202  Variable never used:   RatioII
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:102:5:  Warning#202  Variable never used:   debugnumber
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:114:7:  Warning#202  Variable never used:   pHHigh
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:114:15:  Warning#202  Variable never used:   pHMiddle
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:114:25:  Warning#202  Variable never used:   pHLower
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:115:11:  Warning#202  Variable never used:   pHHighCalibration
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:115:29:  Warning#202  Variable never used:   pHMiddleCalibration
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:115:49:  Warning#202  Variable never used:   pHLowerCalibration
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:123:7:  Warning#202  Variable never used:   BlueLimit
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:123:17:  Warning#202  Variable never used:   WhiteLimit
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:124:7:  Warning#202  Variable never used:   StartWaterTemperature
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:131:16:  Warning#202  Variable never used:   PWMDOIntensity
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:132:16:  Warning#202  Variable never used:   PWMPHIntensity
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:133:16:  Warning#202  Variable never used:   PWMnh3Intensity
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:134:7:  Warning#202  Variable never used:   DOreadingrange
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:135:7:  Warning#202  Variable never used:   pHreadingrange
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:687:14:  Warning#202  Variable never used:   gainMultiplyer
+G:\OsmobotDigitalSensorBoard\LightSensorForDigitalBoard.c:896:6:  Warning#202  Variable never used:   x
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:168:20:  Warning#202  Variable never used:   bufferin
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:272:11:  Warning#202  Variable never used:   checkvalue
+G:\OsomobotCarbonDioxideDigitalSensor\OsomobotCarbonDioxideDigitalSensor.X\ITwoSeeGeneralCommunicationSlave.c:382:20:  Warning#202  Variable never used:   bufferin
+      Memory usage:   ROM=48%      RAM=77% - 99%
+      0 Errors,  63 Warnings.
 Build Successful.

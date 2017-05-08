@@ -3,28 +3,7 @@
 #ifndef byte
 #define byte int8
 #endif
-#define COLOR_SENSOR_ADDR  0x39//the I2C address for the color sensor 
-#define REG_CTL 0x80
-#define REG_TIMING 0x81
-#define REG_INT 0x82
-#define REG_INT_SOURCE 0x83
-#define REG_ID 0x84
-#define REG_GAIN 0x87
-#define REG_LOW_THRESH_LOW_BYTE 0x88
-#define REG_LOW_THRESH_HIGH_BYTE 0x89
-#define REG_HIGH_THRESH_LOW_BYTE 0x8A
-#define REG_HIGH_THRESH_HIGH_BYTE 0x8B
-#define REG_BLOCK_READ 0xCF
-#define REG_GREEN_LOW 0xD0
-#define REG_GREEN_HIGH 0xD1
-#define REG_RED_LOW 0xD2
-#define REG_RED_HIGH 0xD3
-#define REG_BLUE_LOW 0xD4
-#define REG_BLUE_HIGH 0xD5
-#define REG_CLEAR_LOW 0xD6
-#define REG_CLEAR_HIGH 0xD7
-#define CTL_DAT_INIITIATE 0x03
-#define CLR_INT 0xE0
+
 //Timing Register
 #define SYNC_EDGE 0x40
 #define INTEG_MODE_FREE 0x00
@@ -32,22 +11,7 @@
 #define INTEG_MODE_SYN_SINGLE 0x20
 #define INTEG_MODE_SYN_MULTI 0x30
  
-#define INTEG_PARAM_PULSE_COUNT1 0x00
-#define INTEG_PARAM_PULSE_COUNT2 0x01
-#define INTEG_PARAM_PULSE_COUNT4 0x02
-#define INTEG_PARAM_PULSE_COUNT8 0x03
 
-#define GAIN_1 0x00
-#define GAIN_4 0x10
-#define GAIN_16 0x20
-#define GANI_64 0x30
-#define PRESCALER_1 0x00
-#define PRESCALER_2 0x01
-#define PRESCALER_4 0x02
-#define PRESCALER_8 0x03
-#define PRESCALER_16 0x04
-#define PRESCALER_32 0x05
-#define PRESCALER_64 0x06
 
 float tempa1, tempa2, tempa3;   //Addded May 15, 2014 These are the coefecents for thermister calculation
 void selectsensor(int number);
@@ -79,7 +43,7 @@ float x,y,z;  //Color chart positions,coored.
 //Define the 3X4 matrix for solving three unknown equations.
 float matx[3][3];  //This is the global diffinition of solving a 3X3 matrix equation. This is a scrach pad matrix used to pass arrays between functions. Added May 13, 2013
 float matrixequation[3][3]; //  Added May 13, 2013  This is the array used for setting up the eqaution for solving a 3X3 equation.
-float fourbyfourmatrix[4][4];
+//float fourbyfourmatrix[4][4];
 float matrixequals[3]; 
 // Added April 27, 2014  
 // Matrixequals is used for place the results of all three equations.
@@ -155,7 +119,7 @@ int debugnumber = 0;  //Added July 13, 2015.  It keeps the current state of the 
 // This is the calibrations for temperature on the thermister for water
 //*********************************************************************************
 
-	float temp1,reading1,temp2,reading2,temp3,reading3;
+//	float temp1,reading1,temp2,reading2,temp3,reading3;
 	int32 BlueLimit,WhiteLimit;  //This is the limit variable off the SD Card for the desiged light intesity.
 	float StartWaterTemperature;  //This is the varaible used to keep track of the init water temperature for hose air expansion.
 
@@ -325,6 +289,8 @@ void selectsensor(int number)
 
 
 
+
+
 //******************************************************************
 //Created March 17, 2013
 // This routine reads the all four inputs and returns the 16 bit value for that color.
@@ -350,89 +316,89 @@ void ReadColorTAOS(int selectedcolor, int lightsensor)
 		{
 		case 2:   //green
 			i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x72);  //Move the address number left on and add a zero.
-			i2c_write(PH_LIGHT,0x90);  //Send the command for reading the version
+			i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+			i2c_write(PH_LIGHT,0x98);  //Send the command for reading the green light low byte
 			i2c_stop(PH_LIGHT);
 
     		i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x73);  //Move the address number left on and add a one to make is a read command.
-			colorlow = i2c_read(PH_LIGHT,0);
+			i2c_write(PH_LIGHT,0x53);  //Move the address number left on and add a one to make is a read command.
+			colorlow = i2c_read(PH_LIGHT,0);   // read the low byte
 			i2c_stop(PH_LIGHT);
 
 			i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x72);  //Move the address number left on and add a zero.
-			i2c_write(PH_LIGHT,0x91);  //Send the command for reading the version
+			i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+			i2c_write(PH_LIGHT,0x99);  //Send the command for reading the high byte
 			i2c_stop(PH_LIGHT);
 
     		i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x73);  //Move the address number left on and add a one to make is a read command.
-			colorhigh = i2c_read(PH_LIGHT,0);
+			i2c_write(PH_LIGHT,0x53);  //Move the address number left on and add a one to make is a read command.
+			colorhigh = i2c_read(PH_LIGHT,0);  // read the high byte
 			i2c_stop(PH_LIGHT);
 			break;
 
 
 		case 1:   //red
 			i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x72);  //Move the address number left on and add a zero.
-			i2c_write(PH_LIGHT,0x92);  //Send the command for reading the version
+			i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+			i2c_write(PH_LIGHT,0x96);  //Send the command for reading the version
 			i2c_stop(PH_LIGHT);
 
     		i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x73);  //Move the address number left on and add a one to make is a read command.
+			i2c_write(PH_LIGHT,0x53);  //Move the address number left on and add a one to make is a read command.
 			colorlow = i2c_read(PH_LIGHT,0);
 			i2c_stop(PH_LIGHT);
 
 			i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x72);  //Move the address number left on and add a zero.
-			i2c_write(PH_LIGHT,0x93);  //Send the command for reading the version
+			i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+			i2c_write(PH_LIGHT,0x97);  //Send the command for reading the version
 			i2c_stop(PH_LIGHT);
 
     		i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x73);  //Move the address number left on and add a one to make is a read command.
+			i2c_write(PH_LIGHT,0x53);  //Move the address number left on and add a one to make is a read command.
 			colorhigh = i2c_read(PH_LIGHT,0);
 			i2c_stop(PH_LIGHT);
 			break;
 
 		case 3:   //blue
 			i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x72);  //Move the address number left on and add a zero.
-			i2c_write(PH_LIGHT,0x94);  //Send the command for reading the version
+			i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+			i2c_write(PH_LIGHT,0x9A);  //Send the command for reading the version
 			i2c_stop(PH_LIGHT);
 
     		i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x73);  //Move the address number left on and add a one to make is a read command.
+			i2c_write(PH_LIGHT,0x53);  //Move the address number left on and add a one to make is a read command.
 			colorlow = i2c_read(PH_LIGHT,0);
 			i2c_stop(PH_LIGHT);
 
 			i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x72);  //Move the address number left on and add a zero.
-			i2c_write(PH_LIGHT,0x95);  //Send the command for reading the version
+			i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+			i2c_write(PH_LIGHT,0x9B);  //Send the command for reading the version
 			i2c_stop(PH_LIGHT);
 
     		i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x73);  //Move the address number left on and add a one to make is a read command.
+			i2c_write(PH_LIGHT,0x53);  //Move the address number left on and add a one to make is a read command.
 			colorhigh = i2c_read(PH_LIGHT,0);
 			i2c_stop(PH_LIGHT);
 			break;
 
 		case 4:   //clear
 			i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x72);  //Move the address number left on and add a zero.
-			i2c_write(PH_LIGHT,0x96);  //Send the command for reading the version
+			i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+			i2c_write(PH_LIGHT,0x94);  //Send the command for reading the version
 			i2c_stop(PH_LIGHT);
 
     		i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x73);  //Move the address number left on and add a one to make is a read command.
+			i2c_write(PH_LIGHT,0x53);  //Move the address number left on and add a one to make is a read command.
 			colorlow = i2c_read(PH_LIGHT,0);
 			i2c_stop(PH_LIGHT);
 
 			i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x72);  //Move the address number left on and add a zero.
-			i2c_write(PH_LIGHT,0x97);  //Send the command for reading the version
+			i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+			i2c_write(PH_LIGHT,0x95);  //Send the command for reading the version
 			i2c_stop(PH_LIGHT);
 
     		i2c_start(PH_LIGHT);
-			i2c_write(PH_LIGHT,0x73);  //Move the address number left on and add a one to make is a read command.
+			i2c_write(PH_LIGHT,0x53);  //Move the address number left on and add a one to make is a read command.
 			colorhigh = i2c_read(PH_LIGHT,0);
 			i2c_stop(PH_LIGHT);
 			break;
@@ -460,10 +426,28 @@ void StartUpTAOS(int lightsensor)
 	selectsensor(lightsensor);   // make the selection to talk with this sensor.
 // then send the command down to the sensor.  All of the communication is done through the I2C on PH_LIGHT.
 	i2c_start(PH_LIGHT);
-	i2c_write(PH_LIGHT,0x72);  //Move the address number left on and add a zero.
-	i2c_write(PH_LIGHT,0x80);  //Send the command for reading the version
-	i2c_write(PH_LIGHT,0x03);  //Send the command for reading the version
+	i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+	i2c_write(PH_LIGHT,0x80);  //Send the command for reading the version 
+    //  0x01 turns on chip
+    //  0x03 turns on and starts taking a reading
+    
+	i2c_write(PH_LIGHT,0x01);  //Send the command for turning on the chip only  
 	i2c_stop(PH_LIGHT);
+    
+    delay_ms(3);
+    // WLONG configuration.  0x00 is off
+    //                       0x02 is on
+    i2c_start(PH_LIGHT);
+	i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+	i2c_write(PH_LIGHT,0x8D);  //Send the command for reading the version 
+    //  0x01 turns on chip
+    //  0x03 turns on and starts taking a reading
+    
+	i2c_write(PH_LIGHT,0x00);  //Send the command for turning on the chip only  
+	i2c_stop(PH_LIGHT);
+   
+    
+    
 	}
 
 
@@ -485,48 +469,80 @@ void StartUpTAOS(int lightsensor)
 // 2:DO
 // 3:General Light in the ROOM
 //********************************************************************
-void setTAOSGain(byte AnalogGain, int lightsensor)
+void setTAOSGain(int lightsensor)
 	{
-byte controlword,PrescalerGain;
+byte controlword,Integrationtime,again;
 
-controlword = 0;
-PrescalerGain = 0;   // set it to this value if nothing else takes it.
+float tempowrd;
+
+Integrationtime = 0;   // set it to this value if nothing else takes it.
+
 
 if (lightsensor==3)   // changed March 23, 2016.  The passing number is the true sensor number, not the index   Used to be 1
 	{
-    PrescalerGain = 1;
+    Integrationtime = 100;
+    again = 0x03;
 	//PrescalerGain = ExposurescaleDO;
 	}
 
 if (lightsensor==1)  // changed March 23, 2016.  The passing number is the true sensor number, not the index   Used to be 2
 	{
 	//PrescalerGain = ExposurescalepH;
-    PrescalerGain = 1;
+    Integrationtime = 100;
+    again = 0x03;
 	}
 
 if (lightsensor==0)   // This is now for NH4
 	{
     //PrescalerGain = ExposurescaleLight;
-	PrescalerGain = 1;
+	Integrationtime = 100;
+    again = 0x03;
 	}
 
-
-if (AnalogGain > 3)
-	{
-	AnalogGain = 3;
-	}
 
 // Concatinate the control byte.
-controlword = AnalogGain*16 + PrescalerGain;  //This is the offset for gain to placeinto the chip.  Added March 4, 2015
-	selectsensor(lightsensor);   // make the selection to talk with this sensor.
+//controlword = AnalogGain*16 + PrescalerGain;  //This is the offset for gain to placeinto the chip.  Added March 4, 2015
+// Calculate the integtation time
+tempowrd = (float) Integrationtime;
+tempowrd = tempowrd / 2.4;
+Integrationtime = (byte) tempowrd;
+controlword = 256 - Integrationtime;
+
+
+selectsensor(lightsensor);   // make the selection to talk with this sensor.
 
 // then send the command down to the sensor.  All of the communcatiuon is done through the I2C on PH_LIGHT.
+// Added April 26, 2017
+// Update intigration time
 	i2c_start(PH_LIGHT);
-	i2c_write(PH_LIGHT,0x72);  //Move the address number left on and add a zero.
-	i2c_write(PH_LIGHT,0x87);  //The 0x80 is used to tell it's a command.  This is for register 0x07.
+	i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+	i2c_write(PH_LIGHT,0x81);  //The 0x80 is used to tell it's a command.  This is for register 0x07.
 	i2c_write(PH_LIGHT,controlword);  //Move the address number left on and add a zero.
 	i2c_stop(PH_LIGHT);
 	
+    
+    // Added April 26, 2017
+    // Update the wait/delay time
+    
+  	i2c_start(PH_LIGHT);
+	i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+	i2c_write(PH_LIGHT,0x83);  //The 0x80 is used to tell it's a command.  This is for register 0x07.
+	i2c_write(PH_LIGHT,0xff);  //Move the address number left on and add a zero.
+	i2c_stop(PH_LIGHT);  
+    
+    
+    
+    // Added April 26, 2017
+    // Updates the again
+    
+  	i2c_start(PH_LIGHT);
+	i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+	i2c_write(PH_LIGHT,0x8F);  //The 0x80 is used to tell it's a command.  This is for register 0x07.
+	i2c_write(PH_LIGHT,again);  //Move the address number left on and add a zero.
+	i2c_stop(PH_LIGHT);  
+    
+     
+    
 	}
 
 //******************************************************************************************
@@ -556,12 +572,62 @@ int8 GetCurrentColor(int8 GainIn, int8 DeviceSelect)
 	{
 
 //  Set the device to be processed
-
+    int x,returned;
+    
 unsigned int gainMultiplyer;
 
-		setTAOSGain(GainIn,DeviceSelect); //Gain and then scale
-		StartUpTAOS(DeviceSelect);
-        delay_ms(500);
+		setTAOSGain(DeviceSelect); //Gain and then scale
+
+        // created April 26, 2017
+        // this new sections starts itegration and waits for the chip to be ready for reading.
+    i2c_start(PH_LIGHT);
+	i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+	i2c_write(PH_LIGHT,0x80);  //Send the command for reading the version
+    
+    //  0x01 turns on chip
+    //  0x03 turns on and starts taking a reading
+    
+	i2c_write(PH_LIGHT,0x03);  //Send the command for turning on the chip only and starts integration  
+	i2c_stop(PH_LIGHT);
+    delay_ms(10);
+    // loop until reading AVALID
+    for (x=0; x < 1000; x++)
+    {
+        // exit loop when the AVAILD is high
+	i2c_start(PH_LIGHT);
+	i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+	i2c_write(PH_LIGHT,0x93);  //Send the command for reading the version
+	i2c_stop(PH_LIGHT);
+    i2c_start(PH_LIGHT);
+	i2c_write(PH_LIGHT,0x53);  //Move the address number left on and add a one to make is a read command.
+	returned = i2c_read(PH_LIGHT,0);
+	i2c_stop(PH_LIGHT);
+    
+  //  delay_ms(150);
+    if (returned == 0x11)
+        break;
+ //    return(returned);  
+    }
+    
+ 
+    if (x > 990)
+        return(0xFF);   // if the loop fails, then return 0xFF for showing the device does not work.  It does not hang up.
+        
+    
+    // Turn off intigration
+    i2c_start(PH_LIGHT);
+	i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+	i2c_write(PH_LIGHT,0x80);  //Send the command for reading the version
+    
+    //  0x01 turns on chip
+    //  0x03 turns on and starts taking a reading
+    
+	i2c_write(PH_LIGHT,0x01);  //Send the command for turning off the chip only  
+	i2c_stop(PH_LIGHT);
+    delay_ms(3);
+    
+    
+    
 		ReadColorTAOS(2,DeviceSelect);  //green
 
 		green = colorlow + colorhigh * 256;
@@ -604,9 +670,8 @@ unsigned int gainMultiplyer;
 
 		}
 
-
 //*******************************************************************************************
-// Created Nov 23, 2014
+// Created May 4, 2017
 //  This takes several color readings and then averages them together.  This is a direct drop in
 // for the current "int8 GetCurrentColor(int8 GainIn, int8 DeviceSelect)"
 // Returns the gain and the returned value is in the global varaibles called
@@ -614,95 +679,105 @@ unsigned int gainMultiplyer;
 //  Changed May 18, 2015  
 // The below routine is changed from 20 samples to 200 to get the stability down
 //*******************************************************************************************
-int8 GetCurrentColorAVG(int8 GainIn, int8 DeviceSelect)
+void GetCurrentColorAVG(int8 GainIn, int8 DeviceSelect)
 	{
 float tempred, tempblue, tempgreen, tempclear, ageraging;   //These are the averaging varaibles used for internal to the averaging calculations
-int x,GainOut,averagesamples = 10;
+float ttred, ttgreen,ttblue,ttclear;
+int x,GainOut,averagesamples = 12;
 unsigned int gainMultiplyer;
 
-
-
-if (DeviceSelect == 3)   //If this is for DO and the light sensor
-	{
-	averagesamples = 5;
-	ageraging = 5.0;
-    selectsensor(3);
-
-	}
-
-if (DeviceSelect == 0)   //If this is for NH4 and the light sensor
-	{
-	averagesamples = 5;
-	ageraging = 5.0;
-    selectsensor(0);
-
-	}
-if (DeviceSelect == 1)   //If this is for NH4 and the light sensor
-	{
-	averagesamples = 5;
-	ageraging = 5.0;
-    selectsensor(1);
-
-	}
+//******************************************************************************
+// Created May 3, 2017
+// Added an array of numbers for averaging.  The high and low is throuwn out
+//******************************************************************************
+int32 arrayred[12];
+int32 arraygreen[12];
+int32 arrayblue[12];
+int32 arrayclear[12];
+int32 tempvar;
+int done;
 
 	tempred = 0.0;
 	tempblue = 0.0;
 	tempgreen = 0.0;
 	tempclear = 0.0;
+    ageraging = (float) averagesamples - 2.0;
+    // Get the data and put it into an array
 	for (x = 0; x < averagesamples; x++)
 		{
 		GainOut = GetCurrentColor(GainIn, DeviceSelect);
-
-//fprintf(BT,"Raw Unaveraged 1 Red,%Lu,Green,%Lu,Blue,%Lu,Clear,%Lu\n\r",redABS,greenABS,blueABS,clearABS);
-//*****************************************************************
-// Created December 12, 2014
-// This section changes each color to an ABS color using the gainIn scales
-//*****************************************************************
-
-		if (GainOut == 3)
-			{
-			gainMultiplyer =  1;
-			}
-		if (GainOut == 2)
-			{
-			gainMultiplyer =  4;
-			}
-		if (GainOut == 1)
-			{
-			gainMultiplyer =  16;
-			}
-		if (GainOut == 0)
-			{
-			gainMultiplyer =  64;
-			}
-
-
-		redABS = (unsigned int32) red * (unsigned int32) gainMultiplyer;
-		greenABS = (unsigned int32) green * (unsigned int32) gainMultiplyer;
-		blueABS = (unsigned int32) blue * (unsigned int32) gainMultiplyer;
-		clearABS = (unsigned int32) clear * (unsigned int32) gainMultiplyer;
-
-
-
-		tempred = tempred + (float) redABS;
-		tempblue = tempblue + (float) blueABS;
-		tempgreen = tempgreen + (float) greenABS;
-		tempclear = tempclear + (float) clearABS;
+        arrayred[x] = redABS;
+        arraygreen[x] = greenABS;
+        arrayblue[x] = blueABS;
+        arrayClear[x] = clearABS;
 		}
-	tempred = tempred/ageraging;
-	tempblue = tempblue/ageraging;
-	tempgreen = tempgreen/ageraging;
+    
+    // put the array in order
+    
+    done=0;  // set the first flag to get out.
+    while(!done)
+    {
+        done = 1;
+        for (x=0; x < 11; x++)
+        {
+           if  (arrayclear[x] > arrayclear[x+1])
+           {
+              done = 0;  // go for another round 
+               tempvar = arrayclear[x];
+               arrayclear[x] = arrayclear[x+1];
+               arrayclear[x+1] = tempvar;
+               
+               tempvar = arrayred[x];
+               arrayred[x] = arrayred[x+1];
+               arrayred[x+1] = tempvar;
+               
+               tempvar = arraygreen[x];
+               arraygreen[x] = arraygreen[x+1];
+               arraygreen[x+1] = tempvar;
+               
+               tempvar = arrayblue[x];
+               arrayblue[x] = arrayblue[x+1];
+               arrayblue[x+1] = tempvar;
+           }
+        }
+
+    }
+    
+    // average them all together
+    // throw out the high and low number of Clear
+    
+    for (x=1; x < 11; x++)
+    {
+   
+        ttred = (float) arrayred[x];
+        ttclear = (float) arrayclear[x];
+        ttgreen = (float) arraygreen[x];
+        ttblue = (float) arrayblue[x];       
+    // if (DeviceSelect == 0x03)   
+    // {
+        tempred = tempred + ttred/ttclear;
+		tempblue = tempblue + ttblue/ttclear;
+		tempgreen = tempgreen + ttgreen/ttclear;
+		tempclear = tempclear + ttclear;
+    // }
+    // else
+   //  {
+     //   tempred = tempred + ttred;
+	//	tempblue = tempblue + ttblue;
+	//	tempgreen = tempgreen + ttgreen;
+	//	tempclear = tempclear + ttclear;         
+   //  }
+    }
+	tempred = (tempred*10000.0)/ageraging;
+	tempblue = (tempblue*10000.0)/ageraging;
+	tempgreen = (tempgreen*10000.0)/ageraging;
 	tempclear = tempclear/ageraging;
 	redABS = (unsigned int32) tempred;
 	blueABS = (unsigned int32) tempblue;
 	greenABS = (unsigned int32) tempgreen;
 	clearABS = (unsigned int32) tempclear;
-//fprintf(BT,"Raw Unaveraged 3 Red,%Lu,Green,%Lu,Blue,%Lu,Clear,%Lu\n\r",redABS,greenABS,blueABS,clearABS);
-//fprintf(BT,"Blue %Lu  Gain %i ",blueABS, GainOut);
 
-	return(GainOut);
 	}
-
 
 //***************************************************************************************
 // Created Dec. 8, 2014
@@ -751,7 +826,7 @@ void FindAmbientLight(int DeviceSelect)
 // Command 0x04
 // This routine returns the version of the light chip. 
 //*********************************************************************
-int getTAOSVersion(int lightsensor)
+int8 getTAOSVersion(int lightsensor)
 	{
 int8 version;
 
@@ -761,11 +836,11 @@ int8 version;
 
 
 	i2c_start(PH_LIGHT);
-	i2c_write(PH_LIGHT,0x72);  //Move the address number left on and add a zero.
-	i2c_write(PH_LIGHT,0x84);  //Send the command for reading the version
+	i2c_write(PH_LIGHT,0x52);  //Move the address number left on and add a zero.
+	i2c_write(PH_LIGHT,0x92);  //Send the command for reading the version
 	i2c_stop(PH_LIGHT);
-    i2c_start(PH_LIGHT,0);
-	i2c_write(PH_LIGHT,0x73);  //Move the address number left on and add a one to make is a read command.
+    i2c_start(PH_LIGHT);
+	i2c_write(PH_LIGHT,0x53);  //Move the address number left on and add a one to make is a read command.
 	version = i2c_read(PH_LIGHT,0);
 	i2c_stop(PH_LIGHT);
 
@@ -808,6 +883,12 @@ void ExposureTimeTAOS(byte integration, byte lightsensor)
 //*****************************************************************************************
 // Created April 27, 2014
 //This routine inits all of the slave I2C where they have a gain of 1 and start with no ND filteration
+
+//NOTE: INTEG_MODE and TIME/COUNTER fields should be written before ADC_EN is asserted.
+//FIELD VALUE NOMINAL INTEGRATION TIME 
+//0000                12 ms 
+//0001                100 ms 
+//0010                400 ms
 //*****************************************************************************************
 void InitTAOS(void)
 {
@@ -815,26 +896,13 @@ void InitTAOS(void)
 int8 x;
 
 
+// turn on chips  and wait for 2.4 ms.  Only turn on chips, do not start intigration
 
-//setTAOSGain(1,0); //Gain and then scale
-//setTAOSGain(gain,1); //Gain and then scale
-//setTAOSGain(1,2); //Gain and then scale
-//setTAOSGain(gain,3); //Gain and then scale
-//setTAOSGain(1,4); //Gain and then scale
-//setTAOSGain(gain,5); //Gain and then scale
+StartUpTAOS(0x00);  // this starts up the integration time for the DO light sensor
+StartUpTAOS(0x01);  // this starts up the integration time for the DO light sensor
+StartUpTAOS(0x03);  // this starts up the integration time for the DO light sensor
 
-ExposureTimeTAOS(2,0);   // this is for Dph   intigration time of 400ms at number 2
-ExposureTimeTAOS(0,1);   //This is for the DO  // Changed to 400ms exposure and then more light.  
-ExposureTimeTAOS(2,3);   //This is for the NH4  // 
-
-/*
-for (x=0; x < 4; x++)	    // This runs through all of the sensors and starts them up.  Updated December 8, 2015
-	{
-	StartUpTAOS(x);
-	}
-*/
-
-
+delay_ms(3);    // wait for time to expire
 }
 
 
@@ -851,20 +919,21 @@ void LEDtest(void)
     
     output_low(PIN_B5);  // turn off orange DpH LED
     output_high(PIN_B11);  // turn off blue
-    output_high(PIN_B10);  // turn off red
+    output_low(PIN_B10);  // turn off NH4
  
     
     output_high(PIN_B5);  // turn on white DpH LED
     delay_ms(250);
     output_low(PIN_B5);  // turn off orange DpH LED
-    output_high(PIN_B12);  // turn on blue for DO   
+    output_low(PIN_B12);  // turn on blue for DO   
      delay_ms(250);
     output_low(PIN_B12);  // turn off blue DO
-    output_low(PIN_B10);  // turn on red   
+    output_high(PIN_B10);  // turn on NH4  
     delay_ms(250);
 
 
-    output_high(PIN_B11);  // turn off blue
-    output_high(PIN_B10);  // turn off red
+    output_low(PIN_B11);  // turn off blue
+    output_low(PIN_B10);  // turn off red
     output_low(PIN_B5);  // turn off red for p 
+    delay_ms(250);
 }

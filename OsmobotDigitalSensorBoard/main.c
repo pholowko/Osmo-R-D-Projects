@@ -31,6 +31,25 @@
 //include this file.  Only edit this file because it changes all other remote digital boards.
 
 
+//*******************************************************************************
+// Created May 2, 2017
+// Setup the software version and serial number for the current board.
+// The software version is contained in the program sources code.  
+// The serial number is contained in EEPROM
+//  The format is as follows:
+//  Software version   UnitIDCode.Major Change.Minor Change
+//  Each number is two characters or bytes.
+//  The UnitDI Number is tacked on the beginning of the software version number, "SENSORNUMBER"
+//******************************************************************************
+char softwareversion[5] = "01.01";   // This number gets updated each time a new software version is released.  It is not saved in normal memeory.  It is tacked on the end of the I2C transmaission.
+
+
+void GetCurrentColorAVG(int8 GainIn, int8 DeviceSelect);
+
+
+
+
+
 typedef struct outputDataStruct{
 char deviceID[16];
 unsigned int8 hour;
@@ -165,7 +184,15 @@ unsigned int8  incoming, state;
 
    if((state >= 0x80) & (rcv_buffer[0x40] != 0x01))               //Master is requesting data
    {
+ //     if (streamCntr > 0x40) 
+//      {
+         
+          
+ //     }
+ //     else
+//      {
       i2c_write(SENSOR,send_buffer[streamCntr++]);
+//      }
    }
       if((state >= 0x80) & (rcv_buffer[0x40] == 0x01))               //Master is requesting data
    {
@@ -471,115 +498,70 @@ tempsquare = sqrt(tempcalc);
 	return(root1);  //If this root is positive, the return it.
 	}
 
-
-void DetermineTempCoef(void)
+//******************************************************************************
+//Created May 8, 2017
+// This routine finds the water temperature from the on board thermister using polyninal regression.
+//  It takes the raw data from the ADC at 12 bits and converts it to C.
+// The routing first convert to degrees K and then back to advoid divistion by zero
+// The input paramater is the raw ADC data
+// Returns a float of the tempersture in degrees C.
+//******************************************************************************
+float CalculateWaterTemperature(int16 inptadc)
 {
-//This has been removed and placed in TaosLightSensor.h  May 21, 2015
-//float temp1,reading1,temp2,reading2,temp3,reading3;
-float temp1in,temp2in,temp3in;
-float reading1in,reading2in,reading3in;
-float det, det1, det2, det3;   //These are the other dets for each solution
-// This is the raw data.  Added May 15, 2015
 
-temp1 = 40;    
-temp2 = 21;
-temp3 = 6;  
-//temp1 = sysInput.Thermisterpt1returnednumber;    //example 40 C
-//temp2 = sysInput.Thermisterpt2returnednumber;   // example 21  C
-//temp3 = sysInput.Thermisterpt3returnednumber;    // example 6  C
+    int n = 3;  // this is the number of points from the calibration testing.  this changes for more or less data points.
+    int x,y,z;  // dummy varaibles for accessing matx[x][y]
+    int regressionorder = 2;
+    float summationresult, am, amm, ammm;   // this is a temp varible used for adding all of the items.
+//  fill the matrix with n, T, T^2 and T^3
+//  Since this is a second order regression, only a 3X3 matrix is filled.
+    
+nhcalibration[0][0] = 200.0;   //  this is at 40 degrees C
+nhcalibration[0][1] = 40.0 + 273.0;   //  this is at 40 degrees C   // The numbers are backwards in order
+nhcalibration[1][0] = 448.0;   //  this is at 40 degrees C
+nhcalibration[1][1] = 16.0 + 273.0;   //  this is at 40 degrees C   // The numbers are backwards in order
+nhcalibration[2][0] = 590.0;   //  this is at 40 degrees C
+nhcalibration[2][1] = 6.0 + 273.0;   //  this is at 40 degrees C   // The numbers are backwards in order
+    
+    for (y=0; y <= regressionorder; y++)
+    {
+        for (x=0; x <= regressionorder; x++)
+        {
+           summationresult = 0.0;//  set to zero before starting the summation.
+           for (z=0; z < n; z++)  // find the sum of each items needed
+           {
+               summationresult = summationresult + pow(nhcalibration[z][0],(x+y));
+           }
+            
+            matrixequation[x][y] = summationresult;  // place the sum of the squares or whatever into the array.
+        }
+    }
+    matx[0][0] = (float) n;  // place the first location the number of samples for the regression matrix.
 
-//***************************************************************************
-//Added January 13, 2015
-// These are the values used for the 10K reistor stolen from Animatics
-//***************************************************************************
-reading1 = 5140;
-reading2 = 13037;
-reading3 = 27594;
-
-//reading1 = sysInput.Thermisterpt1cal1of3;   //5140
-//reading2 = sysInput.Thermisterpt1cal2of3;  // 13037;
-//reading3 = sysInput.Thermisterpt1cal3of3;  //  27594;
-//***************************************************************************
-//Added January 13, 2015
-// These are the values used for the ?K reistor supplied by Rick
-//***************************************************************************
-
-//reading1 = 12000;   //this one is measured at 45 degrees C   // these numbers are for the 30K reistor
-//reading2 = 40000;   //this is measured at 22 C  Checked on May 14, 2015
-//reading3 = 72000;   // this tempature is measured at 12 degrees C
-
-
-temp1in = 1.0/(temp1 + 273.0);
-temp2in = 1.0/(temp2 + 273.0);
-temp3in = 1.0/(temp3 + 273.0);
-
-
-reading1in = log(reading1);
-reading2in = log(reading2);
-reading3in = log(reading3);
-
-
-//  This part solves for tempa1, tempa2, tempa3 4
-// Find the divistion determinent
-
-matx[0][0] = 1.0;
-matx[1][0] = 1.0;
-matx[2][0] = 1.0;
-matx[0][1] = reading1in;
-matx[1][1] = reading2in;
-matx[2][1] = reading3in;
-matx[0][2] = reading1in*reading1in;
-matx[1][2] = reading2in*reading2in;
-matx[2][2] = reading3in*reading3in;
-
-det = FindTheDetermint();
-
-//Find the det for tempa1
-
-matx[0][0] = temp1in;
-matx[1][0] = temp2in;
-matx[2][0] = temp3in;
-matx[0][1] = reading1in;
-matx[1][1] = reading2in;
-matx[2][1] = reading3in;
-matx[0][2] = reading1in*reading1in;
-matx[1][2] = reading2in*reading2in;
-matx[2][2] = reading3in*reading3in;
-
-det1 = FindTheDetermint();
-tempa1=det1/det;   //  This finds the value for the first a1
-
-matx[0][0] = 1.0;
-matx[1][0] = 1.0;
-matx[2][0] = 1.0;
-matx[0][1] = temp1in;
-matx[1][1] = temp2in;
-matx[2][1] = temp3in;
-matx[0][2] = reading1in*reading1in;
-matx[1][2] = reading2in*reading2in;
-matx[2][2] = reading3in*reading3in;
-
-
-det2 = FindTheDetermint();
-tempa2=det2/det;   //  This finds the value for the first a2
-
-
-
-matx[0][0] = 1.0;
-matx[1][0] = 1.0;
-matx[2][0] = 1.0;
-matx[0][1] = reading1in;
-matx[1][1] = reading2in;
-matx[2][1] = reading3in;
-matx[0][2] = temp1in;
-matx[1][2] = temp2in;
-matx[2][2] = temp3in;
-
-det3 = FindTheDetermint();
-tempa3=det3/det;   //  This finds the value for the first a2
-
-
+    // figure out the blue color times the input number sumation.
+    
+    for (x=0; x < n; x++ )
+    {
+       summationresult = 0.0;//  set to zero before starting the summation.
+       for (z=0; z < n; z++)  // find the sum of each items needed 
+       {
+        summationresult = summationresult + nhcalibration[z][1]*pow(nhcalibration[z][0],x);
+       }
+        matrixequals[x] = summationresult;
+    }
+    ThreeByThreeSolution();    //  find the coeffs
+        
+    ammm= MatrixSolution[2];
+    amm = MatrixSolution[1];
+    am = MatrixSolution[0];
+    summationresult = (float) inptadc;
+    summationresult = am + amm*summationresult + ammm*summationresult*summationresult;
+    
+    return(summationresult);
+    
 }
+
+ 
 //*************************************************************
 // Created Nov. 6, 2012
 //  This routine reads an ADC and averages 16 samples into one and returns the number.
@@ -619,38 +601,23 @@ int16 GetADCValue(int selection)
 float ConvertADCToKalvin(int ADCInputNumber)
 	{
 int16 ReturnedADC;
-float32 ADCVoltageIn,Kelvin, tempfloater;
+float32 Kelvin;
     int8 highbyte, lowbyte;
     int16 returneditem;  // this is the returned item
 	ReturnedADC = GetADCValue(ADCInputNumber);  //This gets the current ADC convertion for the channel number.
 //    ADCVoltageIn = ReturnedADC * 5.0 / 1024.0;  //Recycled the same float variable.  This is for the 5 volts version.
-  tempfloater = (float) ReturnedADC;
-  ADCVoltageIn = (float) ReturnedADC * 3.3 / 1024.0;  //Recycled the same float variable.  This converts the input into scaling
- 
-  
+ // tempfloater = (float) ReturnedADC;
+  //ADCVoltageIn = (float) ReturnedADC * 3.3 / 1024.0;  //Recycled the same float variable.  This converts the input into scaling
+
         lowbyte = 0x00FF & ReturnedADC;
         returneditem = 0xFF00 & ReturnedADC;
-        highbyte = ReturnedADC>8;  // this moves it over to the low part
+        highbyte = ReturnedADC/256;  // this moves it over to the low part
         send_buffer[14] = lowbyte;   // update this on the send buffer  Added Oct 16, 2016
         send_buffer[13] = highbyte;   // update this on the send buffer  Added Oct 16, 2016    this is all that is needed to send the data.  When the master asks for the 
 
-//Added May 18, 2015  - The current/last thermister is RL0503-7.56K-96-MS  it's a 30K thermister.
-// This is for the thermister to be on the top of the 5K resistor
- 
-//	ADCVoltageIn = 5100.0*ADCVoltageIn/(3.3 - ADCVoltageIn);  // Calulate the thermister reistance over a voltage divider.  It's at the bottom of a 0 to 5 volts divider.  The resistance is 4.999K
 
-//ADCVoltageIn = 4999.0*ADCVoltageIn/(5.0 - ADCVoltageIn);  // Calulate the thermister reistance over a voltage divider.  It's at the bottom of a 0 to 5 volts divider.  The resistance is 4.999K
-//When it is when it's on the bottom....  The resistance becomes different.
-//ADCVoltageIn = ADCVoltageIn/((5.0 - ADCVoltageIn)/4999.0);   // find the thermister resistace
-ADCVoltageIn = ADCVoltageIn/((3.3 - ADCVoltageIn)/5100.0);   // find the thermister resistace
+Kelvin = CalculateWaterTemperature(ReturnedADC) - 273.0;
 
-
-//ADCVoltageIn=12000.0;
-
-DetermineTempCoef();
-
-//Kelvin = (1/(tempa1 + tempa2*(log(ADCVoltageIn)) + tempa3*(log(ADCVoltageIn)*log(ADCVoltageIn))))-273.15;   //This is the old line of code used to find the thermister temperature
-Kelvin = (1/(tempa1 + tempa2*(log(ADCVoltageIn)) + tempa3*(log(ADCVoltageIn)*log(ADCVoltageIn))))-273.15;
 	return(Kelvin);
 	}
 
@@ -725,19 +692,7 @@ for (x = 1; x < 41; x++)
 void TakeLightReading(int SensorChannel)
 {
 
-int color,attemptcounter, attempts,ttt,x;
-int32 result,stepdifference;  //This is the result of the calculation.  This is returned to the calling function.
-
-float DOReading,pgain,tempoffset;
-char uffit[60];
-
-unsigned int32 difference;
-    int8 highbyte, lowbyte;
-    int16 returneditem;  // this is the returned item
-
-
-    
-
+ 
     
 //*************************************************************************************
 //  Added Augest 28, 2015
@@ -774,7 +729,7 @@ if (SensorChannel == 3)
     delay_ms(100);  // set a PWM setup delay to stablize the timing.
 }
 
-	color = GetCurrentColorAVG(3, SensorChannel);   // Number 2 is the colored  LED.  The 4 means it any gain reading
+	 GetCurrentColorAVG(0, SensorChannel);   // Number 2 is the colored  LED.  The 4 means it any gain reading
 
 // turn off all lights
 	output_low(PIN_B12);    // turn off the blue light
@@ -861,15 +816,69 @@ if (clearABS < 0)
 	}
 
 
+//***************************************************************************************************
+// Created May 5, 2017
+// This routine uses polynomal regresion for determining the NN4 + NH3 from the optical patch
+// Right now it only solves for second order.  All of the hooks are left in place for third order.
+//  The input color value is entered as a int16
+// Returned is a float of the resultant NN4 + NH3.  It needs to be seperated between NH4 and NH3
+float calculateAmmonia(int inputcolor)
+{
+    int n = 4;  // this is the number of points from the calibration testing.  this changes for more or less data points.
+    int x,y,z;  // dummy varaibles for accessing matx[x][y]
+    int regressionorder = 2;
+    float summationresult, am, amm, ammm;   // this is a temp varible used for adding all of the items.
+//  fill the matrix with n, T, T^2 and T^3
+//  Since this is a second order regression, only a 3X3 matrix is filled.
+    
+    for (y=0; y <= regressionorder; y++)
+    {
+        for (x=0; x <= regressionorder; x++)
+        {
+           summationresult = 0.0;//  set to zero before starting the summation.
+           for (z=0; z < n; z++)  // find the sum of each items needed
+           {
+               summationresult = summationresult + pow(nhcalibration[z][0],(x+y));
+           }
+            
+            matrixequation[x][y] = summationresult;  // place the sum of the squares or whatever into the array.
+        }
+    }
+    matx[0][0] = (float) n;  // place the first location the number of samples for the regression matrix.
+
+    // figure out the blue color times the input number sumation.
+    
+    for (x=0; x < n; x++ )
+    {
+       summationresult = 0.0;//  set to zero before starting the summation.
+       for (z=0; z < n; z++)  // find the sum of each items needed 
+       {
+        summationresult = summationresult + nhcalibration[z][1]*pow(nhcalibration[z][0],x);
+       }
+        matrixequals[x] = summationresult;
+    }
+    ThreeByThreeSolution();    //  find the coeffs
+        
+    ammm= MatrixSolution[2];
+    amm = MatrixSolution[1];
+    am = MatrixSolution[0];
+    summationresult = (float) inputcolor;
+    summationresult = am + amm*summationresult + ammm*summationresult*summationresult;
+    
+    return(summationresult);
+}
+
+
+
 
 //*********************************************************************
 // 
 void main(void){
-    int8 x,returdata;
-    int returneddummy;
+    int8 x;
+
     int16 changeover;  //this is used for changeing the int32 to 16 bit.
-    int32 OxyBlue;
-    float xxx;
+
+ 
     int8 blinkinggreenlight = 0;  // Added March 30, 2017  This is the blinking green light counter varaible
 
     int16 returneditem;  // this is the returned item
@@ -910,7 +919,10 @@ LEDtest();
 
 
 InitTAOS(); // this sets up the scaler time for the DO light
-//StartUpTAOS(0x00);  // this starts up the integration time for the DO light sensor
+delay_ms(1000);
+
+
+
 setup_adc(ADC_CLOCK_INTERNAL);
 setup_adc_ports(sAN11|sAN12);
 enable_interrupts(INT_SI2C2);     
@@ -927,12 +939,10 @@ while(1)
 // read the DO measurement
     //FindAmbientLight(0x01);   // this selects DO   Find the background light with no blue light on
         output_high(PIN_B12);
-        returdata = GetCurrentColor(0x03, 0x01);
- 
+//        returdata = GetCurrentColor(0x00, 0x01);
+        GetCurrentColorAVG(0x00, 0x01);
     //   TakeLightReading(0x03);   
-    wTemp = WaterTemperature();
-    
-
+        wTemp = WaterTemperature();
         output_low(PIN_B12);
     // this seaves DO measurements
         changeover = (int16) greenABS;
@@ -968,7 +978,8 @@ while(1)
      output_high(PIN_B5);  // turn on white DpH LED
           // TakeLightReading(0x00);   
   // this selects DpH  Take a measurement and find the ABS color difference
-    returdata =  GetCurrentColorAVG(0x03, 0x00);
+ //   returdata =  GetCurrentColorAVG(0x00, 0x00);
+    GetCurrentColorAVG(0x00, 0x00);
      output_low(PIN_B5);  // turn on white DpH LED
     // this saves DpH measurements
         changeover = (int16) greenABS;
@@ -1000,10 +1011,11 @@ while(1)
         send_buffer[25] = highbyte;   // update this
     
         
-        output_low(PIN_B10);  // turn on white NH4 LED
+        output_high(PIN_B10);  // turn on white NH4 LED
          // this selects NH4  Take a measurement and find the ABS color difference
-         returdata =  GetCurrentColorAVG(0x03, 0x03);
-        output_high(PIN_B10);  // turn off white NH4 LED
+      //   returdata =  GetCurrentColorAVG(0x03, 0x03);
+         GetCurrentColorAVG(0x00, 0x03);
+        output_low(PIN_B10);  // turn off white NH4 LED
     // this saves DpH measurements
         changeover = (int16) greenABS;
          lowbyte = 0x00FF & changeover;
@@ -1026,19 +1038,23 @@ while(1)
         send_buffer[34] = lowbyte;   // update this on the send buffer  Added Oct 16, 2016
         send_buffer[33] = highbyte;   // update this on the send buffer  Added Oct 16, 2016    this is all that is needed to send the data.  When the master asks for the 
 
+        
+       sysOutput.nh3 = calculateAmmonia(changeover);   // find the nh4 + nh3     
+        
         changeover = (int16) clearABS;
         lowbyte = 0x00FF & changeover;
         returneditem = 0xFF00 & changeover;
         highbyte = returneditem>>8;  // this moves it over to the low part
         send_buffer[36] = lowbyte;   // update this on the send buffer  Added Oct 16, 2016
         send_buffer[35] = highbyte;   // update this
-       /* 
+
+ 
         
-        xxx =  CalcaulateDO(redABS,wTemp);  //This holds the color intensity variable and the temperature in degrees C.
-    
-    
-    */
-    
+     // move calcaulated temperature into output buffer for water temperature
+    send_buffer[1] =  (int) sysOutput.nh3;  // high whole number byte
+    send_buffer[2] =  (int) ((sysOutput.nh3 - (float) (int) sysOutput.nh3)*100);  // high whole number byte   
+        
+        
     	sysOutput.wTemp = wTemp;  //This is the float temperature
     
     	if (sysOutput.wTemp < 0.0)
